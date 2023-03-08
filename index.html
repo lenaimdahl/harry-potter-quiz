@@ -5,56 +5,58 @@
     <link rel="stylesheet" href="./stylesheet/style.css" />
   </head>
   <body>
-    <header></header>
+    <div id="welcome">welcome</div>
+    <div id="Game-content">
+      <header></header>
+      <div>
+        <h1 class="heading">First some math, <br />then some fun Questions</h1>
+      </div>
 
-    <div>
-      <h1 class="heading">First some math, <br />then some fun Questions</h1>
-    </div>
-
-    <div class="position">
-      <div class="figure">
-        <div class="bubble-wrapper">
-          <div class="bubble bubble-bottom-left" id="hermine">
-            you can do it!
+      <div class="position">
+        <div class="figure">
+          <div class="bubble-wrapper">
+            <div class="bubble bubble-bottom-left" id="hermine">
+              you can do it!
+            </div>
+          </div>
+          <div class="figure-box-left">
+            <img
+              class="figure-1"
+              src="images/hermine2.png"
+              alt="Hermine Granger"
+            />
           </div>
         </div>
-        <div class="figure-box-left">
-          <img
-            class="figure-1"
-            src="images/hermine2.png"
-            alt="Hermine Granger"
-          />
-        </div>
-      </div>
 
-      <div class="activity-field">
-        <div>
-          <div id="question"></div>
-          <div id="choices">
-            <div id="box1" class="box"></div>
-            <div id="box2" class="box"></div>
-            <div id="box3" class="box"></div>
-            <div id="box4" class="box"></div>
+        <div class="activity-field">
+          <div>
+            <div id="question"></div>
+            <div id="choices">
+              <div id="box1" class="box"></div>
+              <div id="box2" class="box"></div>
+              <div id="box3" class="box"></div>
+              <div id="box4" class="box"></div>
+            </div>
+            <div id="startreset">Start Game</div>
           </div>
-          <div id="startreset">Start Game</div>
+        </div>
+
+        <div class="figure-box-right">
+          <div class="bubble-wrapper"></div>
+          <div class="bubble bubble-bottom-right" id="ron">Hello!</div>
+          <img class="figure-2" src="images/ron.PNG" alt="Ron Weasley" />
         </div>
       </div>
 
-      <div class="figure-box-right">
-        <div class="bubble-wrapper"></div>
-        <div class="bubble bubble-bottom-right" id="ron">Hello!</div>
-        <img class="figure-2" src="images/ron.PNG" alt="Ron Weasley" />
+      <footer class="footer">
+        Hermine: Image taken from:
+        https://wiki.coldmirror.net/wiki/Datei:Hermione01.jpg <br />
+        Ron: Image taken from:
+      </footer>
+      <div id="canvas-board">
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script>
       </div>
+      <script type="text/javascript" src="src/level.js"></script>
     </div>
-
-    <footer class="footer">
-      Hermine: Image taken from:
-      https://wiki.coldmirror.net/wiki/Datei:Hermione01.jpg <br />
-      Ron: Image taken from:
-    </footer>
-    <div id="canvas-board">
-      <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script>
-    </div>
-    <script type="text/javascript" src="src/level.js"></script>
   </body>
 </html>
