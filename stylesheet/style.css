@@ -8,11 +8,9 @@ body {
   margin: 0;
   background-image: url("../images/hall.WEBP");
   background-size: cover;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   height: 100%;
-}
-
-.heading-container {
 }
 
 .heading {
@@ -23,16 +21,12 @@ body {
   font-family: cursive, sans-serif;
 }
 
-.position-static {
-  position: static;
-  bottom: 20px;
-}
-
 .position {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  position: static;
+  position: absolute;
+  bottom: 0;
 }
 
 .figure-box-left {
@@ -103,7 +97,8 @@ body {
   border-radius: 5px;
   background-image: url("../images/tafel.avif");
   color: #fff;
-  margin-top: 150px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   font-family: "CustomFont", cursive;
 }
 
@@ -176,13 +171,9 @@ body {
   position: relative;
 }
 
-main {
-  margin: 0;
-}
-
 .footer {
   font-size: 10pt;
-  background-color: rgb(51, 35, 35);
+  background-color: rgb(0, 0, 0);
   color: rgba(255, 255, 255, 0.5);
   position: fixed;
   left: 0;
@@ -190,5 +181,4 @@ main {
   width: 100%;
   padding: 10px;
   text-align: center;
-  margin: 0;
 }
