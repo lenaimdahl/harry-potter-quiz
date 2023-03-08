@@ -4,7 +4,7 @@ let speedY = 6.6;
 let snitch = { x: 0, y: 0 };
 
 function preload() {
-  imgSnitch = loadImage("../images/snitch.png");
+  imgSnitch = loadImage("images/snitch.png");
 }
 function setup() {
   let canvas = createCanvas(windowWidth, 400);
@@ -52,9 +52,9 @@ for (i = 1; i < 5; i++) {
         document.getElementById("hermine").innerHTML = "correct!";
         document.getElementById("pippi").innerHTML = "Sure Hermine?";
       } else {
-        document.getElementById("pippi").innerHTML = "That's right!";
+        document.getElementById("ron").innerHTML = "That's right!";
         document.getElementById("hermine").innerHTML =
-          "No Pippi, it's not right!";
+          "No ron, it's not right!";
       }
     }
   };
