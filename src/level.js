@@ -7,11 +7,11 @@ function preload() {
   imgSnitch = loadImage("../images/snitch.png");
 }
 function setup() {
-  let canvas = createCanvas(windowWidth, windowHeight);
+  let canvas = createCanvas(windowWidth, 400);
   canvas.position(0, 0, "fixed");
 
-  snitch.x = width / 2;
-  snitch.y = height / 2;
+  snitch.x = 0;
+  snitch.y = 0;
 }
 
 function draw() {

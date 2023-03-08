@@ -101,22 +101,6 @@ body {
   margin-top: 150px;
 }
 
-/* 
-.button {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin: 5px;
-}
-
-.check-button {
-  padding: 20px;
-  font-size: 15pt;
-  font-weight: bold;
-  background-color: #c83349;
-  color: #f0efef;
-} */
-
 #canvas-board {
   position: absolute;
   top: 0;
@@ -154,6 +138,7 @@ body {
   text-align: center;
   font-family: cursive, sans-serif;
   color: white;
+  margin-top: 150px;
 }
 
 #choices {
