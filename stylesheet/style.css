@@ -12,6 +12,13 @@ body {
   background-repeat: no-repeat;
   height: 100%;
 }
+#welcome {
+  display: none;
+}
+
+#Gema-content {
+  display: inherit;
+}
 
 .heading {
   font-size: 30pt;
