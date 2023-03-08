@@ -1,55 +1,26 @@
-// adding Level
+let speedX = 4.5;
+let speedY = 6.6;
 
-class level {
-  constructor(color, x, y) {
-    this.color = color;
-    this.x = x;
-    this.y = y;
-  }
-
-  display() {
-    // method!
-    fill(this.color);
-    circle(this.x, this.y, 20);
-  }
-}
-
-let circle1;
-let circle2;
-let circle3;
-let circle4;
-let circle5;
-
-//calculate
+let snitch = { x: 0, y: 0 };
 
 function preload() {
-  imgBackground = loadImage("../images/Background-yellow.avif");
+  imgSnitch = loadImage("../images/snitch.png");
 }
-
 function setup() {
-  const gameBoard = createCanvas(350, 50);
-  gameBoard.position(360, 470);
+  let canvas = createCanvas(windowWidth, windowHeight);
+  canvas.position(0, 0, "fixed");
 
-  circle1 = new level("#c94c4c", 160, 20, 50);
-  circle2 = new level("#c94c4c", 190, 20, 50);
-  circle3 = new level("#c94c4c", 220, 20, 50);
-  circle4 = new level("#c94c4c", 250, 20, 50);
-  circle5 = new level("#c94c4c", 280, 20, 50);
+  snitch.x = width / 2;
+  snitch.y = height / 2;
 }
 
 function draw() {
-  background(250);
-  image(imgBackground, 0, 0, 700, 700);
+  clear();
+  background("rgba(255,255,255, 0)");
+  image(imgSnitch, snitch.x, snitch.y, 40, 40);
 
-  circle1.display();
-  circle2.display();
-  circle3.display();
-  circle4.display();
-  circle5.display();
-
-  textSize(30);
-  fill("#588c7e");
-  text("Level:", 20, 30);
+  snitch.x = snitch.x + random(-speedX, speedX);
+  snitch.y = snitch.y + random(-speedY, speedY);
 }
 
 // calculating

@@ -1,44 +1,50 @@
-@media (max-width: 667px) {
-}
 body {
   font-family: Arial, Helvetica, sans-serif;
-  margin: 50px;
-  background-color: #feb236;
-  background-image: url("../images/Background-yellow.avif");
+  margin: 0;
+  background-image: url("../images/hall.WEBP");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
 }
 
 .heading-container {
-  width: 780px;
 }
 
 .heading {
-  font-size: 35pt;
-  color: #c83349;
+  font-size: 30pt;
+  color: green;
   margin: 0;
   text-align: center;
   font-family: cursive, sans-serif;
-  background-image: url("../images/paper.png");
-  width: 100%;
-  height: auto;
-  padding: 20px;
 }
 
-.figure-box {
+.position-static {
+  position: static;
+  bottom: 20px;
+}
+
+.position {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-right: 100px;
-  margin-left: 100px;
-  margin-top: 30px;
+  position: static;
 }
 
-.figure {
-  height: 250px;
+.figure-box-left {
+  position: static;
+  bottom: 20px;
+  margin-right: 70px;
+  margin-left: 30px;
+}
+
+.figure-box-right {
+  position: static;
+  bottom: 20px;
+  margin-right: 30px;
 }
 
 .bubble-wrapper {
   display: flex;
-
   flex-direction: row;
   justify-content: space-between;
   margin: 50px 20px 50px 20px;
@@ -90,28 +96,9 @@ body {
   border-width: 7px;
   border-style: solid;
   border-radius: 5px;
-  margin: 0 70px 0 70px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   background-image: url("../images/tafel.avif");
   color: #fff;
-}
-
-.assignment {
-  color: #c83349;
-  text-align: left;
-}
-
-#quiz {
-  margin: 30px;
-}
-
-#game-board {
-  float: left;
-  margin: 20px;
-  padding: 20px 0px;
+  margin-top: 150px;
 }
 
 /* 
@@ -130,11 +117,9 @@ body {
   color: #f0efef;
 } */
 
-#container {
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+#canvas-board {
+  position: absolute;
+  top: 0;
 }
 
 #score {
@@ -147,7 +132,7 @@ body {
 
 #correct {
   position: absolute;
-  left: 260px;
+  left: 2pxpx;
   background-color: #42e252;
   color: white;
   padding: 11px;
@@ -165,7 +150,6 @@ body {
 #question {
   width: 450px;
   height: 150px;
-  margin: 0px auto 60px auto;
   font-size: 100px;
   text-align: center;
   font-family: cursive, sans-serif;
@@ -176,33 +160,44 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin: 20px 200px;
 }
 
 .box {
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   background-image: url("../images/Background-yellow.avif");
   border-radius: 5px;
   cursor: pointer;
   text-align: center;
-  font-size: 40pt;
+  font-size: 30pt;
   text-align: center;
   font-family: cursive, sans-serif;
 }
 
 #startreset {
-  width: 78px;
+  width: 100px;
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.5);
-  margin: 0 auto;
+  margin: 20px auto;
   border-radius: 3px;
   cursor: pointer;
   text-align: center;
   position: relative;
 }
 
+main {
+  margin: 0;
+}
+
 .footer {
   font-size: 10pt;
-  margin-top: 150px;
+  background-color: rgb(51, 35, 35);
+  color: rgba(255, 255, 255, 0.5);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  margin: 0;
 }
