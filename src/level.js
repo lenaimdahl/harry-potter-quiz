@@ -1,4 +1,4 @@
-// obj p5js
+// obj p5.js
 
 let speedX = 2.5;
 let speedY = 2.6;
@@ -76,6 +76,8 @@ document.getElementById("startreset").onclick = function () {
     playing = true;
     score = 0;
 
+    document.getElementById("scorevalue").innerHTML = score;
+
     document.getElementById("startreset").innerHTML = "Reset Game";
 
     //generate quetion
@@ -89,8 +91,12 @@ for (i = 1; i < 5; i++) {
       if (this.innerHTML == correctAnswer) {
         //increase score
         score++;
+        document.getElementById("scorevalue").innerHTML = score;
+
         document.getElementById("hermine").innerHTML = "correct!";
         document.getElementById("ron").innerHTML = "Sure Hermine?";
+
+        generateQA();
       } else {
         document.getElementById("ron").innerHTML = "That's right!";
         document.getElementById("hermine").innerHTML =
@@ -120,7 +126,8 @@ function generateQA() {
       do {
         wrongAnswer =
           (1 + Math.round(9 * Math.random())) *
-          (1 + Math.round(9 * Math.random())); //wrong answer
+          (1 + Math.round(9 * Math.random()));
+        //wrong answer
       } while (answers.indexOf(wrongAnswer) > -1);
 
       document.getElementById("box" + i).innerHTML = wrongAnswer;
