@@ -1,3 +1,9 @@
+// document.querySelector("#start-btn").onclick = function () {
+//   document.querySelector("#welcome").style.display = "none";
+
+//   document.querySelector("#game-content").style.display = "inherit";
+// };
+
 // obj p5.js
 
 let speedX = 2.5;
@@ -80,7 +86,6 @@ document.getElementById("startreset").onclick = function () {
 
     document.getElementById("startreset").innerHTML = "Reset Game";
 
-    //generate quetion
     generateQA();
   }
 };
@@ -89,7 +94,6 @@ for (i = 1; i < 5; i++) {
   document.getElementById("box" + i).onclick = function () {
     if (playing == true) {
       if (this.innerHTML == correctAnswer) {
-        //increase score
         score++;
         document.getElementById("scorevalue").innerHTML = score;
 
@@ -115,9 +119,8 @@ function generateQA() {
   document.getElementById("question").innerHTML = x + "x" + y;
   let correctPosition = 1 + Math.round(3 * Math.random());
 
-  document.getElementById("box" + correctPosition).innerHTML = correctAnswer; //correct answer
+  document.getElementById("box" + correctPosition).innerHTML = correctAnswer;
 
-  //wrong answers
   let answers = [correctAnswer];
 
   for (i = 1; i < 5; i++) {
@@ -127,11 +130,13 @@ function generateQA() {
         wrongAnswer =
           (1 + Math.round(9 * Math.random())) *
           (1 + Math.round(9 * Math.random()));
-        //wrong answer
       } while (answers.indexOf(wrongAnswer) > -1);
 
       document.getElementById("box" + i).innerHTML = wrongAnswer;
       answers.push(wrongAnswer);
     }
+  }
+  if (score === 0) {
+    generateHPQuiz();
   }
 }
