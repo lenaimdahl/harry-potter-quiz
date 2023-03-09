@@ -12,12 +12,49 @@ body {
   background-repeat: no-repeat;
   height: 100%;
 }
+
 #welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 100px 20px;
+}
+
+.intro {
+  background-image: url("../images/paper.png");
+  background-size: 100%;
+  width: 500px;
+  height: 600px;
+  margin: 50px 0;
+}
+
+.intro-text {
+  color: #de401a;
+  font-size: 25pt;
+  text-align: center;
+  padding: 70px 60px;
+}
+.intro-text h4 {
+  text-align: left;
+}
+
+#Game-content {
   display: none;
 }
 
-#Gema-content {
-  display: inherit;
+#start-btn {
+  font-size: 25pt;
+  color: #0e4124;
+  width: 400px;
+  height: 100px;
+  cursor: pointer;
+  padding: 20px;
+  border-color: bisque;
+  border-radius: 0.3em;
+  background-image: url("../images/paper.png");
+  background-position: 500px;
 }
 
 .heading {
@@ -118,8 +155,7 @@ body {
   font-size: 100pt;
   text-align: center;
   color: white;
-  margin-top: 10px;
-  margin-bottom: 100px;
+  margin: 10px 40px 70px 40px;
 }
 
 #choices {
