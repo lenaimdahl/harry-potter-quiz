@@ -16,17 +16,17 @@ function setup() {
   let canvas = createCanvas(windowWidth, 400);
   canvas.position(0, 0, "fixed");
 
-  snitch.x = 0;
-  snitch.y = 0;
+  snitch.x = 350;
+  snitch.y = 200;
 
-  key1.x = 3;
-  key1.y = 0;
+  key1.x = 250;
+  key1.y = 100;
 
-  key2.x = 4;
-  key2.y = 5;
+  key2.x = 550;
+  key2.y = 200;
 
-  key3.x = 10;
-  key3.y = 6;
+  key3.x = 700;
+  key3.y = 60;
 }
 
 function draw() {
@@ -46,9 +46,9 @@ function draw() {
   key3.y = constrain(key3.y, 10, 400);
 
   image(imgSnitch, snitch.x, snitch.y, 50, 50);
-  image(key1, key1.x, key1.y, 60, 60);
-  image(key2, key2.x, key2.y, 60, 60);
-  image(key3, key3.x, key3.y, 60, 60);
+  image(key1, key1.x, key1.y, 50, 50);
+  image(key2, key2.x, key2.y, 50, 50);
+  image(key3, key3.x, key3.y, 50, 50);
 
   snitch.x = snitch.x + random(-speedX, speedX);
   snitch.y = snitch.y + random(-speedY, speedY);
