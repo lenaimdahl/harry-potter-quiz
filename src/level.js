@@ -69,13 +69,12 @@ function draw() {
   key3.y = key3.y + random(-speedY, speedY) * 1;
 }
 
-// calculating
+// set up game questions
 let playing = false;
 let score;
-let action;
-let correctAnswer;
+let finalAnswer;
 
-document.getElementById("startreset").onclick = function () {
+function startGame() {
   if (playing == true) {
     location.reload();
   } else {
@@ -83,60 +82,134 @@ document.getElementById("startreset").onclick = function () {
     score = 0;
 
     document.getElementById("scorevalue").innerHTML = score;
-
     document.getElementById("startreset").innerHTML = "Reset Game";
 
-    generateQA();
+    generateMultiply();
   }
-};
+}
+document.getElementById("startreset").onclick = startGame;
 
-for (i = 1; i < 5; i++) {
-  document.getElementById("box" + i).onclick = function () {
-    if (playing == true) {
-      if (this.innerHTML == correctAnswer) {
-        score++;
-        document.getElementById("scorevalue").innerHTML = score;
-
-        document.getElementById("hermine").innerHTML = "correct!";
-        document.getElementById("ron").innerHTML = "Sure Hermine?";
-
-        generateQA();
-      } else {
-        document.getElementById("ron").innerHTML = "That's right!";
-        document.getElementById("hermine").innerHTML =
-          "No ron, it's not right!";
+function showBubbles() {
+  if (playing == true) {
+    if (this.innerHTML == finalAnswer) {
+      score++;
+      document.getElementById("scorevalue").innerHTML = score;
+      document.getElementById("hermine").innerHTML = "correct!";
+      document.getElementById("ron").innerHTML = "Sure Hermine?";
+      if (score < 5) {
+        generateMultiply();
       }
+      if (score >= 5 && score < 10) {
+        generateHPQuiz(0);
+      }
+      if (score >= 11 && score < 15) {
+        generateplus();
+      }
+      if (score >= 16 && score < 20) {
+        generateHPQuiz(1);
+      }
+    } else {
+      document.getElementById("ron").innerHTML = "That's right!";
+      document.getElementById("hermine").innerHTML = "No ron, it's not right!";
     }
-  };
+  }
 }
 
-//guestion
-function generateQA() {
-  let x = 1 + Math.round(9 * Math.random());
-  let y = 1 + Math.round(9 * Math.random());
-  correctAnswer = x * y;
+for (i = 0; i < 4; i++) {
+  document.getElementById("box" + i).onclick = showBubbles;
+}
 
-  document.getElementById("question").innerHTML = x + "x" + y;
-  let correctPosition = 1 + Math.round(3 * Math.random());
+function showChoices(correctAnswer, choice2, choice3, choice4) {
+  let boxes = [];
 
-  document.getElementById("box" + correctPosition).innerHTML = correctAnswer;
+  for (i = 0; i < 4; i++) {
+    let boxId;
+    do {
+      boxId = Math.round(3 * Math.random());
+    } while (boxes.includes(boxId));
 
-  let answers = [correctAnswer];
-
-  for (i = 1; i < 5; i++) {
-    if (i != correctPosition) {
-      let wrongAnswer;
-      do {
-        wrongAnswer =
-          (1 + Math.round(9 * Math.random())) *
-          (1 + Math.round(9 * Math.random()));
-      } while (answers.indexOf(wrongAnswer) > -1);
-
-      document.getElementById("box" + i).innerHTML = wrongAnswer;
-      answers.push(wrongAnswer);
-    }
+    boxes.push(boxId);
   }
-  if (score === 0) {
-    generateHPQuiz();
-  }
+
+  let box0 = document.querySelector(`#box${boxes[0]}`);
+  box0.innerHTML = correctAnswer;
+
+  let box1 = document.querySelector(`#box${boxes[1]}`);
+  box1.innerHTML = choice2;
+
+  let box2 = document.querySelector(`#box${boxes[2]}`);
+  box2.innerHTML = choice3;
+
+  let box3 = document.querySelector(`#box${boxes[3]}`);
+  box3.innerHTML = choice4;
+}
+
+function showQuestion(text) {
+  let questionElement = document.getElementById("question");
+  questionElement.innerHTML = text;
+}
+
+//Math Fumctions
+function generateMultiply() {
+  let num1 = 1 + Math.round(19 * Math.random());
+  let num2 = 1 + Math.round(19 * Math.random());
+  let correctAnswer = num1 * num2;
+  finalAnswer = correctAnswer;
+
+  showQuestion(`${num1} * ${num2}`);
+
+  let choice1 = correctAnswer;
+  let choice2 =
+    1 + Math.round(9 * Math.random()) * (1 + Math.round(9 * Math.random()));
+  let choice3 =
+    1 + Math.round(9 * Math.random()) * (1 + Math.round(9 * Math.random()));
+  let choice4 =
+    1 + Math.round(9 * Math.random()) * (1 + Math.round(9 * Math.random()));
+
+  showChoices(choice1, choice2, choice3, choice4);
+}
+
+//hogwarts questions
+let hogwartsQA = [
+  {
+    question: "In what house is Pansy Parkinson?",
+    answers: {
+      a: "Gryffindor",
+      b: "Ravenclaw",
+      c: "Slytherin",
+      d: "Hufflepuff",
+    },
+    correctAnswer: "Slytherin",
+  },
+  {
+    question: "What is the name of Hagrid's boarhound dog?",
+    answers: { a: "Fang", b: "Bing", c: "Fluffy", d: "Snoopy" },
+    correctAnswer: "1",
+  },
+  {
+    question: "In what house is Pansy Parkinson?",
+    answers: {
+      a: "Gryffindor",
+      b: "Ravenclaw",
+      c: "Slytherin",
+      d: "Hufflepuff",
+    },
+    correctAnswer: "Slytherin",
+  },
+  {
+    question: "What is the name of Hagrid's boarhound dog?",
+    answers: { a: "Fang", b: "Bing", c: "Fluffy", d: "Snoopy" },
+    correctAnswer: "1",
+  },
+];
+
+function generateHPQuiz(index) {
+  showQuestion(hogwartsQA[index].question);
+  showChoices(
+    hogwartsQA[index].answers.a,
+    hogwartsQA[index].answers.b,
+    hogwartsQA[index].answers.c,
+    hogwartsQA[index].answers.d
+  );
+  finalAnswer = hogwartsQA[index].correctAnswer;
 }
