@@ -87,17 +87,18 @@ body {
 }
 
 #score {
-  background-color: #f1ff92;
-  color: #888e5f;
+  color: #acb18e;
   padding: 11px;
-  position: absolute;
-  left: 500px;
+  margin-top: 30px;
+  margin-left: 350px;
+  margin-right: 30px;
+  font-size: 25pt;
 }
 
 #correct {
   position: absolute;
   left: 2pxpx;
-  background-color: #42e252;
+  background-color: gold;
   color: white;
   padding: 11px;
   display: none;
@@ -117,7 +118,7 @@ body {
   font-size: 100pt;
   text-align: center;
   color: white;
-  margin-top: 100px;
+  margin-top: 10px;
   margin-bottom: 100px;
 }
 

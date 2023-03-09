@@ -90,7 +90,7 @@ for (i = 1; i < 5; i++) {
         //increase score
         score++;
         document.getElementById("hermine").innerHTML = "correct!";
-        document.getElementById("pippi").innerHTML = "Sure Hermine?";
+        document.getElementById("ron").innerHTML = "Sure Hermine?";
       } else {
         document.getElementById("ron").innerHTML = "That's right!";
         document.getElementById("hermine").innerHTML =
