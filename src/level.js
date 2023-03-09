@@ -1,5 +1,7 @@
-let speedX = 4.5;
-let speedY = 6.6;
+// snitch p5js
+
+let speedX = 2.5;
+let speedY = 2.6;
 
 let snitch = { x: 0, y: 0 };
 
@@ -17,7 +19,10 @@ function setup() {
 function draw() {
   clear();
   background("rgba(255,255,255, 0)");
-  image(imgSnitch, snitch.x, snitch.y, 40, 40);
+
+  snitch.x = constrain(snitch.x, 10, 700);
+  snitch.y = constrain(snitch.y, 10, 400);
+  image(imgSnitch, snitch.x, snitch.y, 50, 50);
 
   snitch.x = snitch.x + random(-speedX, speedX);
   snitch.y = snitch.y + random(-speedY, speedY);
