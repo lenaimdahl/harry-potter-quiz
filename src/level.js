@@ -37,13 +37,13 @@ function draw() {
   snitch.y = constrain(snitch.y, 10, 400);
 
   key1.x = constrain(key1.x, 10, 700);
-  key1.y = constrain(key1.y, 10, 400);
+  key1.y = constrain(key1.y, 10, 300);
 
   key2.x = constrain(key2.x, 10, 700);
-  key2.y = constrain(key2.y, 10, 400);
+  key2.y = constrain(key2.y, 10, 300);
 
   key3.x = constrain(key3.x, 10, 700);
-  key3.y = constrain(key3.y, 10, 400);
+  key3.y = constrain(key3.y, 10, 300);
 
   image(imgSnitch, snitch.x, snitch.y, 50, 50);
   image(key1, key1.x, key1.y, 50, 50);
@@ -56,11 +56,11 @@ function draw() {
   key1.x = key1.x + random(-speedX, speedX) * 3;
   key1.y = key1.y + random(-speedY, speedY) * 2;
 
-  key2.x = key2.x + random(-speedX, speedX) * 5;
+  key2.x = key2.x + random(-speedX, speedX) * 2;
   key2.y = key2.y + random(-speedY, speedY) * 1;
 
   key3.x = key3.x + random(-speedX, speedX) * 3;
-  key3.y = key3.y + random(-speedY, speedY) * 4;
+  key3.y = key3.y + random(-speedY, speedY) * 1;
 }
 
 // calculating
