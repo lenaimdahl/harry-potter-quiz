@@ -140,7 +140,6 @@ body {
 
 .level-section {
   display: flex;
-  flex-direction: row;
 }
 
 #level {
@@ -150,18 +149,16 @@ body {
 }
 #score {
   color: #fcfcfc;
-  padding: 11px;
-  margin-left: 450px;
+  margin-left: 280px;
   margin-right: 20px;
   font-size: 30pt;
 }
 #question {
-  width: 550px;
   height: 150px;
   font-size: 40pt;
   text-align: center;
   color: white;
-  margin: 40px 40px 40px 40px;
+  margin: 20px;
 }
 #choices {
   display: flex;
@@ -171,7 +168,7 @@ body {
 }
 
 .box {
-  width: 150px;
+  width: 130px;
   height: 60px;
   background-color: rgb(132, 126, 126);
   border-radius: 5px;
