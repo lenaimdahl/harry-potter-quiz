@@ -205,8 +205,13 @@ body {
   left: 0;
   bottom: 0;
   width: 100%;
-  padding: 10px 40px 60px 40px;
+  padding: 20px;
   text-align: left;
-  background-image: url("../images/banner\ .webp");
-  background-size: contain;
+  background-color: black;
+}
+.banner {
+  text-align: center;
+}
+.banner img {
+  height: 70px;
 }
