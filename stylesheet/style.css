@@ -137,6 +137,17 @@ body {
   position: absolute;
   top: 0;
 }
+
+.level-section {
+  display: flex;
+  flex-direction: row;
+}
+
+#level {
+  color: #fcfcfc;
+  margin-left: 20px;
+  font-size: 30pt;
+}
 #score {
   color: #fcfcfc;
   padding: 11px;
