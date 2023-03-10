@@ -97,16 +97,28 @@ function showBubbles() {
       document.getElementById("hermine").innerHTML = "correct!";
       document.getElementById("ron").innerHTML = "Sure Hermine?";
       if (score < 5) {
-        generateMultiply();
+        generateAdd();
       }
       if (score >= 5 && score < 10) {
         generateHPQuiz(0);
       }
       if (score >= 11 && score < 15) {
-        generateplus();
+        generateSub();
       }
       if (score >= 16 && score < 20) {
         generateHPQuiz(1);
+      }
+      if (score >= 11 && score < 15) {
+        generateDevide();
+      }
+      if (score >= 16 && score < 20) {
+        generateHPQuiz(2);
+      }
+      if (score >= 11 && score < 15) {
+        generateMultiply();
+      }
+      if (score >= 16 && score < 20) {
+        generateHPQuiz(3);
       }
     } else {
       document.getElementById("ron").innerHTML = "That's right!";
@@ -150,6 +162,64 @@ function showQuestion(text) {
 }
 
 //Math Fumctions
+//devide
+function generateDevide() {
+  let num1 = 1 + Math.round(19 / Math.random());
+  let num2 = 1 + Math.round(19 / Math.random());
+  let correctAnswer = num1 / num2;
+  finalAnswer = correctAnswer;
+
+  showQuestion(`${num1} / ${num2}`);
+
+  let choice1 = correctAnswer;
+  let choice2 =
+    1 + Math.round(9 * Math.random()) * (1 + Math.round(9 * Math.random()));
+  let choice3 =
+    1 + Math.round(9 * Math.random()) * (1 + Math.round(9 * Math.random()));
+  let choice4 =
+    1 + Math.round(9 * Math.random()) * (1 + Math.round(9 * Math.random()));
+
+  showChoices(choice1, choice2, choice3, choice4);
+}
+//add
+function generateAdd() {
+  let num1 = 1 + Math.round(19 + Math.random());
+  let num2 = 1 + Math.round(19 + Math.random());
+  let correctAnswer = num1 + num2;
+  finalAnswer = correctAnswer;
+
+  showQuestion(`${num1} + ${num2}`);
+
+  let choice1 = correctAnswer;
+  let choice2 =
+    1 + Math.round(9 * Math.random()) * (1 + Math.round(9 * Math.random()));
+  let choice3 =
+    1 + Math.round(9 * Math.random()) * (1 + Math.round(9 * Math.random()));
+  let choice4 =
+    1 + Math.round(9 * Math.random()) * (1 + Math.round(9 * Math.random()));
+
+  showChoices(choice1, choice2, choice3, choice4);
+}
+//substract
+function generateSub() {
+  let num1 = 1 + Math.round(19 - Math.random());
+  let num2 = 1 + Math.round(19 - Math.random());
+  let correctAnswer = num1 - num2;
+  finalAnswer = correctAnswer;
+
+  showQuestion(`${num1} - ${num2}`);
+
+  let choice1 = correctAnswer;
+  let choice2 =
+    1 + Math.round(9 * Math.random()) * (1 + Math.round(9 * Math.random()));
+  let choice3 =
+    1 + Math.round(9 * Math.random()) * (1 + Math.round(9 * Math.random()));
+  let choice4 =
+    1 + Math.round(9 * Math.random()) * (1 + Math.round(9 * Math.random()));
+
+  showChoices(choice1, choice2, choice3, choice4);
+}
+//multiply
 function generateMultiply() {
   let num1 = 1 + Math.round(19 * Math.random());
   let num2 = 1 + Math.round(19 * Math.random());
