@@ -84,7 +84,7 @@ function startGame() {
     document.getElementById("scorevalue").innerHTML = score;
     document.getElementById("startreset").innerHTML = "Reset Game";
 
-    generateMultiply();
+    generateAdd();
   }
 }
 document.getElementById("startreset").onclick = startGame;
@@ -109,7 +109,7 @@ function showBubbles() {
         generateHPQuiz(1);
       }
       if (score >= 11 && score < 15) {
-        generateDevide();
+        generateDivide();
       }
       if (score >= 16 && score < 20) {
         generateHPQuiz(2);
@@ -162,8 +162,8 @@ function showQuestion(text) {
 }
 
 //Math Fumctions
-//devide
-function generateDevide() {
+//divide
+function generateDivide() {
   let num1 = 1 + Math.round(19 / Math.random());
   let num2 = 1 + Math.round(19 / Math.random());
   let correctAnswer = num1 / num2;
@@ -173,11 +173,11 @@ function generateDevide() {
 
   let choice1 = correctAnswer;
   let choice2 =
-    1 + Math.round(9 * Math.random()) * (1 + Math.round(9 * Math.random()));
+    1 + Math.round(9 * Math.random()) / (1 + Math.round(9 * Math.random()));
   let choice3 =
-    1 + Math.round(9 * Math.random()) * (1 + Math.round(9 * Math.random()));
+    1 + Math.round(9 * Math.random()) / (1 + Math.round(9 * Math.random()));
   let choice4 =
-    1 + Math.round(9 * Math.random()) * (1 + Math.round(9 * Math.random()));
+    1 + Math.round(9 * Math.random()) / (1 + Math.round(9 * Math.random()));
 
   showChoices(choice1, choice2, choice3, choice4);
 }
@@ -192,11 +192,11 @@ function generateAdd() {
 
   let choice1 = correctAnswer;
   let choice2 =
-    1 + Math.round(9 * Math.random()) * (1 + Math.round(9 * Math.random()));
+    1 + Math.round(9 * Math.random()) + (1 + Math.round(9 * Math.random()));
   let choice3 =
-    1 + Math.round(9 * Math.random()) * (1 + Math.round(9 * Math.random()));
+    1 + Math.round(9 * Math.random()) + (1 + Math.round(9 * Math.random()));
   let choice4 =
-    1 + Math.round(9 * Math.random()) * (1 + Math.round(9 * Math.random()));
+    1 + Math.round(9 * Math.random()) + (1 + Math.round(9 * Math.random()));
 
   showChoices(choice1, choice2, choice3, choice4);
 }
@@ -211,11 +211,11 @@ function generateSub() {
 
   let choice1 = correctAnswer;
   let choice2 =
-    1 + Math.round(9 * Math.random()) * (1 + Math.round(9 * Math.random()));
+    1 + Math.round(9 * Math.random()) - (1 + Math.round(9 * Math.random()));
   let choice3 =
-    1 + Math.round(9 * Math.random()) * (1 + Math.round(9 * Math.random()));
+    1 + Math.round(9 * Math.random()) - (1 + Math.round(9 * Math.random()));
   let choice4 =
-    1 + Math.round(9 * Math.random()) * (1 + Math.round(9 * Math.random()));
+    1 + Math.round(9 * Math.random()) - (1 + Math.round(9 * Math.random()));
 
   showChoices(choice1, choice2, choice3, choice4);
 }
