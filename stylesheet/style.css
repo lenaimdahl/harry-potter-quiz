@@ -22,7 +22,6 @@ body {
   margin: 100px 20px;
   display: none;
 }
-
 .intro {
   background-image: url("../images/paper.png");
   background-size: 100%;
@@ -30,7 +29,6 @@ body {
   height: 720px;
   margin: 50px 0;
 }
-
 .intro-text {
   color: #de401a;
   font-size: 25pt;
@@ -43,9 +41,9 @@ body {
 }
 
 #game-content {
-  display: inherit;
+  display: flex;
+  flex-direction: column;
 }
-
 #start-btn {
   font-size: 25pt;
   color: #0e4124;
@@ -61,22 +59,29 @@ body {
 
 .heading {
   font-size: 30pt;
-  color: green;
+  color: red;
   margin: 0;
   text-align: center;
   font-family: cursive, sans-serif;
 }
+.heading h2 {
+  margin: 40px 0 0 0;
+}
+.heading h4 {
+  font-size: 25pt;
+  margin: 0;
+}
 
 .position {
   display: flex;
-  position: absolute;
-  bottom: 0;
+  flex-direction: row;
+  justify-content: center;
 }
-
-.figure {
-  flex-grow: 1;
+.figure-1 {
+  position: fixed;
+  left: 0;
+  bottom: 20px;
 }
-
 .activity-field {
   border: #0e4124;
   border-width: 7px;
@@ -84,10 +89,15 @@ body {
   border-radius: 5px;
   background-image: url("../images/tafel.avif");
   color: #fff;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 20px;
+  margin-bottom: 70px;
   font-family: "CustomFont", cursive;
-  flex-grow: 4;
+  max-width: 800px;
+}
+.figure-2 {
+  position: fixed;
+  bottom: 20px;
+  right: 0;
 }
 
 .bubble-wrapper {
@@ -96,7 +106,6 @@ body {
   justify-content: space-between;
   margin: 50px 20px 50px 20px;
 }
-
 .bubble {
   position: relative;
   font-family: sans-serif;
@@ -111,7 +120,6 @@ body {
   font-weight: bold;
   background-color: gold;
 }
-
 .bubble-bottom:before {
   content: "";
   width: 0px;
@@ -129,7 +137,6 @@ body {
   position: absolute;
   top: 0;
 }
-
 #score {
   color: #fcfcfc;
   padding: 11px;
@@ -138,7 +145,6 @@ body {
   margin-right: 30px;
   font-size: 30pt;
 }
-
 #question {
   width: 450px;
   height: 150px;
@@ -147,7 +153,6 @@ body {
   color: white;
   margin: 10px 40px 70px 40px;
 }
-
 #choices {
   display: flex;
   flex-direction: row;
