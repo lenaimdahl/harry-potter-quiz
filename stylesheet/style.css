@@ -30,7 +30,7 @@ body {
   margin: 50px 0;
 }
 .intro-text {
-  color: #de401a;
+  color: #d11e15;
   font-size: 25pt;
   text-align: center;
   padding: 70px 90px;
@@ -46,12 +46,12 @@ body {
 }
 #start-btn {
   font-size: 25pt;
-  color: #0e4124;
+  color: #d11e15;
   width: 400px;
   height: 100px;
   cursor: pointer;
   padding: 20px;
-  border-color: rgb(79, 77, 75);
+  border-color: #0e4124;
   border-radius: 0.3em;
   background-image: url("../images/paper.png");
   background-position: 500px;
@@ -59,7 +59,7 @@ body {
 
 .heading {
   font-size: 30pt;
-  color: red;
+  color: #d11e15;
   margin: 0;
   text-align: center;
   font-family: cursive, sans-serif;
@@ -68,7 +68,7 @@ body {
   margin: 40px 0 0 0;
 }
 .heading h4 {
-  font-size: 25pt;
+  font-size: 30pt;
   margin: 0;
 }
 
@@ -140,27 +140,27 @@ body {
 #score {
   color: #fcfcfc;
   padding: 11px;
-  margin-top: 30px;
-  margin-left: 350px;
-  margin-right: 30px;
+  margin-left: 450px;
+  margin-right: 20px;
   font-size: 30pt;
 }
 #question {
-  width: 450px;
+  width: 550px;
   height: 150px;
-  font-size: 100pt;
+  font-size: 40pt;
   text-align: center;
   color: white;
-  margin: 10px 40px 70px 40px;
+  margin: 40px 40px 40px 40px;
 }
 #choices {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  font-size: 20pt;
 }
 
 .box {
-  width: 130px;
+  width: 150px;
   height: 60px;
   background-color: rgb(132, 126, 126);
   border-radius: 5px;
