@@ -33,6 +33,11 @@
         <h4>Unravel its secrets, solve its mysteries!</h4>
       </div>
 
+      <div id="timeremaining">
+        Time remaining:
+        <span id="timeremainingvalue">30</span>
+      </div>
+
       <div class="position">
         <div class="figure-1">
           <div class="bubble-wrapper">
@@ -56,7 +61,12 @@
                 score: <span id="scorevalue" style="font-weight: 900">0</span>
               </div>
             </div>
-            <div id="question"></div>
+
+            <div id="question">
+              <span id="question-text"></span>
+              <div id="game-over">Game Over!</div>
+            </div>
+
             <div id="choices">
               <div id="box0" class="box"></div>
               <div id="box1" class="box"></div>

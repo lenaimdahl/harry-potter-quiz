@@ -226,3 +226,28 @@ body {
 .banner img {
   height: 70px;
 }
+
+#timeremaining {
+  color: white;
+  font-size: 20pt;
+  width: 250px;
+  padding: 10px;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  display: none;
+}
+
+#timeremainingvalue {
+  margin-left: 10px;
+}
+
+#game-over {
+  font-size: 50pt;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: red;
+  z-index: 2;
+  display: none;
+}

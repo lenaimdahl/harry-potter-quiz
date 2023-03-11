@@ -75,10 +75,12 @@ let score = 0;
 let finalAnswer;
 let level = 1;
 let HPQuizIndex = 0;
+let timeremaining;
+let timer;
 
 // create random number
-function createRandomNum() {
-  return 1 + Math.round(19 * Math.random());
+function createRandomNum(min = 1, max = 19) {
+  return min + Math.round(max * Math.random());
 }
 
 //start the game
@@ -93,6 +95,7 @@ function startGame() {
     document.getElementById("startreset").innerHTML = "Reset Game";
 
     generateAdd();
+    startCountdown();
   }
 }
 document.getElementById("startreset").onclick = startGame;
@@ -119,6 +122,33 @@ function createLevel() {
     document.querySelector("#level-text").innerHTML =
       "You reached a new Level!";
   }
+}
+
+function startCountdown() {
+  timeremaining = 30;
+  document.querySelector("#timeremaining").style.display = "inherit";
+  document.getElementById("timeremainingvalue").innerHTML = timeremaining;
+
+  timer = setInterval(() => {
+    timeremaining -= 1;
+
+    document.getElementById("timeremainingvalue").innerHTML = timeremaining;
+
+    if (timeremaining === 0) {
+      stopCountdown();
+      document.querySelector("#question-text").style.display = "none";
+      document.querySelector("#game-over").style.display = "inherit";
+    }
+  }, 1000);
+}
+
+function stopCountdown() {
+  clearInterval(timer);
+}
+
+function resetCountdown() {
+  stopCountdown();
+  startCountdown();
 }
 
 function checkAnswer() {
@@ -156,6 +186,7 @@ function checkAnswer() {
       if (score >= 35 && score < 40) {
         generateHPQuiz();
       }
+      resetCountdown();
     } else {
       document.getElementById("ron").innerHTML = "That's right!";
       document.getElementById("hermine").innerHTML = "No ron, it's not right!";
@@ -193,7 +224,7 @@ function showChoices(correctAnswer, choice2, choice3, choice4) {
 }
 
 function showQuestion(text) {
-  let questionElement = document.getElementById("question");
+  let questionElement = document.getElementById("question-text");
   questionElement.innerHTML = text;
 }
 
@@ -216,33 +247,33 @@ function generateDivide() {
 }
 //add
 function generateAdd() {
-  let num1 = createRandomNum();
-  let num2 = createRandomNum();
+  let num1 = createRandomNum(1, 99);
+  let num2 = createRandomNum(1, 99);
   let correctAnswer = num1 + num2;
   finalAnswer = correctAnswer;
 
   showQuestion(`${num1} + ${num2}`);
 
   let choice1 = correctAnswer;
-  let choice2 = createRandomNum() + createRandomNum();
-  let choice3 = createRandomNum() + createRandomNum();
-  let choice4 = createRandomNum() + createRandomNum();
+  let choice2 = createRandomNum(1, 99) + createRandomNum(1, 99);
+  let choice3 = createRandomNum(1, 99) + createRandomNum(1, 99);
+  let choice4 = createRandomNum(1, 99) + createRandomNum(1, 99);
 
   showChoices(choice1, choice2, choice3, choice4);
 }
 //substract
 function generateSub() {
-  let num1 = createRandomNum();
-  let num2 = createRandomNum();
+  let num1 = createRandomNum(1, 99);
+  let num2 = createRandomNum(1, 99);
   let correctAnswer = num1 - num2;
   finalAnswer = correctAnswer;
 
   showQuestion(`${num1} - ${num2}`);
 
   let choice1 = correctAnswer;
-  let choice2 = createRandomNum() - createRandomNum();
-  let choice3 = createRandomNum() - createRandomNum();
-  let choice4 = createRandomNum() - createRandomNum();
+  let choice2 = createRandomNum(1, 99) - createRandomNum(1, 99);
+  let choice3 = createRandomNum(1, 99) - createRandomNum(1, 99);
+  let choice4 = createRandomNum(1, 99) - createRandomNum(1, 99);
 
   showChoices(choice1, choice2, choice3, choice4);
 }
