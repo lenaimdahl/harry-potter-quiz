@@ -69,6 +69,21 @@ body {
   font-size: 35pt;
 }
 
+#timeremaining {
+  color: white;
+  font-size: 20pt;
+  width: 250px;
+  padding: 10px;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  display: none;
+}
+
+#timeremainingvalue {
+  margin-left: 10px;
+}
+
 .position {
   display: flex;
   flex-direction: row;
@@ -110,10 +125,10 @@ body {
   line-height: 25px;
   width: 150px;
   background: #fff;
-  border-radius: 30px;
-  padding: 30px;
+  border-radius: 25px;
+  padding: 25px;
   text-align: center;
-  color: green;
+  color: #ff0000;
   font-weight: bold;
   background-color: gold;
 }
@@ -144,6 +159,12 @@ body {
   margin-left: 20px;
   font-size: 30pt;
 }
+#level-text {
+  padding-top: 50px;
+  color: white;
+  font-size: 30pt;
+}
+
 #score {
   color: #fcfcfc;
   margin-left: 280px;
@@ -220,21 +241,6 @@ body {
 }
 .banner img {
   height: 70px;
-}
-
-#timeremaining {
-  color: white;
-  font-size: 20pt;
-  width: 250px;
-  padding: 10px;
-  position: absolute;
-  right: 30px;
-  top: 30px;
-  display: none;
-}
-
-#timeremainingvalue {
-  margin-left: 10px;
 }
 
 #game-over {
