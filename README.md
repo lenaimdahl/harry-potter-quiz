@@ -2,6 +2,8 @@
 
 Harry Potter Chamber of Secrets Quiz Game
 
+Introduction
+
 This is a quiz game developed in JavaScript about the Chamber of Secrets from Harry Potter. The game is divided into two parts where the player needs to answer math questions and Harry Potter trivia questions to proceed to the next level.
 
 Installation
