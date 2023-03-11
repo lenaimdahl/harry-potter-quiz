@@ -252,3 +252,18 @@ body {
   z-index: 2;
   display: none;
 }
+
+#chamber-secrets {
+  background-image: url("../images/Chamber.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 400px;
+  width: 1000px;
+  color: rgb(255, 0, 0);
+  text-align: center;
+  padding-top: 10px;
+  font-family: "CustomFont", cursive;
+  font-size: 25pt;
+  display: none;
+  z-index: 3;
+}

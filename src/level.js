@@ -186,6 +186,12 @@ function checkAnswer() {
       if (score >= 35 && score < 40) {
         generateHPQuiz();
       }
+      if (score === 40) {
+        document.querySelector("#question-text").style.display = "none";
+        document.querySelector("#game-over").style.display = "none";
+        document.querySelector("#chamber-secrets").style.display = "inherit";
+        stopCountdown();
+      }
       resetCountdown();
     } else {
       document.getElementById("ron").innerHTML = "That's right!";
