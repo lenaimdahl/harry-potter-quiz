@@ -181,25 +181,26 @@ function checkAnswer() {
         generateHPQuiz();
       }
       if (score >= 20 && score < 25) {
-        generateDivide();
+        generateMultiply();
       }
       if (score >= 25 && score < 30) {
         generateHPQuiz();
       }
       if (score >= 30 && score < 35) {
-        generateMultiply();
+        generatePlusMinus();
       }
       if (score >= 35 && score < 40) {
         generateHPQuiz();
       }
       if (score === 40) {
         document.querySelector("#question-text").style.display = "none";
+        document.querySelector("#choices").style.display = "none";
         document.querySelector("#game-over").style.display = "none";
         document.querySelector("#chamber-secrets").style.display = "inherit";
         stopCountdown();
+      } else {
+        resetCountdown();
       }
-
-      resetCountdown();
     } else {
       chance--;
       document.querySelector("#chancevalue").innerHTML = chance;
@@ -245,23 +246,28 @@ function showQuestion(text) {
 
 //Math Fumctions
 //divide
-function generateDivide() {
+function generatePlusMinus() {
+  setChoicesStyle();
+  setQuestionStyle();
   let num1 = createRandomNum();
   let num2 = createRandomNum();
-  let correctAnswer = num1 / num2;
+  let num3 = createRandomNum();
+  let correctAnswer = num1 + num2 * num3;
   finalAnswer = correctAnswer;
 
-  showQuestion(`${num1} / ${num2}`);
+  showQuestion(`${num1} + ${num2} * ${num3}`);
 
   let choice1 = correctAnswer;
-  let choice2 = createRandomNum() / createRandomNum();
-  let choice3 = createRandomNum() / createRandomNum();
-  let choice4 = createRandomNum() / createRandomNum();
+  let choice2 = createRandomNum() + createRandomNum() * createRandomNum();
+  let choice3 = createRandomNum() + createRandomNum() * createRandomNum();
+  let choice4 = createRandomNum() + createRandomNum() * createRandomNum();
 
   showChoices(choice1, choice2, choice3, choice4);
 }
 //add
 function generateAdd() {
+  setChoicesStyle();
+  setQuestionStyle();
   let num1 = createRandomNum(1, 99);
   let num2 = createRandomNum(1, 99);
   let correctAnswer = num1 + num2;
@@ -278,8 +284,11 @@ function generateAdd() {
 }
 //substract
 function generateSub() {
+  setChoicesStyle();
+  setQuestionStyle();
   let num1 = createRandomNum(1, 99);
   let num2 = createRandomNum(1, 99);
+
   let correctAnswer = num1 - num2;
   finalAnswer = correctAnswer;
 
@@ -294,6 +303,8 @@ function generateSub() {
 }
 //multiply
 function generateMultiply() {
+  setChoicesStyle();
+  setQuestionStyle();
   let num1 = createRandomNum();
   let num2 = createRandomNum();
   let correctAnswer = num1 * num2;
@@ -310,8 +321,18 @@ function generateMultiply() {
 }
 
 //hogwarts questions
+function setQuestionStyle(size = "40pt") {
+  document.querySelector("#question-text").style.fontSize = size;
+}
+function setChoicesStyle(size = "30pt") {
+  for (let i = 0; i < 4; i++) {
+    document.querySelector(`#box${i}`).style.fontSize = size;
+  }
+}
 
 function generateHPQuiz() {
+  setChoicesStyle("17pt");
+  setQuestionStyle("25pt");
   showQuestion(hogwartsQA[HPQuizIndex].question);
   showChoices(
     hogwartsQA[HPQuizIndex].answers.a,
