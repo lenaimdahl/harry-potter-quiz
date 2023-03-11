@@ -181,4 +181,14 @@ let hogwartsQA = [
     },
     correctAnswer: "Draco",
   },
+  {
+    question: "What animal can Harry speak to?",
+    answers: {
+      a: "Spider",
+      b: "Dragon",
+      c: "Snake",
+      d: "Qwl",
+    },
+    correctAnswer: "Snake",
+  },
 ];
