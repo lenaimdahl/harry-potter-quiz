@@ -161,13 +161,17 @@ body {
 }
 #level-text {
   padding-top: 50px;
-  color: white;
+
   font-size: 30pt;
+}
+#chances {
+  font-size: 30pt;
+  margin-left: 120px;
 }
 
 #score {
   color: #fcfcfc;
-  margin-left: 280px;
+  margin-left: 160px;
   margin-right: 20px;
   font-size: 30pt;
 }
