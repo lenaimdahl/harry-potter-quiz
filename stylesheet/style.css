@@ -54,7 +54,6 @@ body {
 }
 
 .heading {
-  font-size: 30pt;
   color: #ff0000;
   text-shadow: 2px 2px rgb(0, 58, 1);
   margin-bottom: 80px;
@@ -62,10 +61,12 @@ body {
   font-family: cursive, sans-serif;
 }
 .heading h2 {
+  font-size: 35pt;
   margin: 40px 0 0 0;
 }
 .heading h4 {
   margin: 0;
+  font-size: 35pt;
 }
 
 .position {
@@ -100,7 +101,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 50px 20px 50px 20px;
+  margin: 10px 20px 30px 80px;
 }
 .bubble {
   position: relative;
