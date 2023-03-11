@@ -20,7 +20,6 @@ body {
   align-items: center;
   width: 100%;
   margin: 100px 20px;
-  display: none;
 }
 .intro {
   background-image: url("../images/paper.png");
@@ -41,7 +40,8 @@ body {
 }
 
 #game-content {
-  display: flex;
+  display: none;
+
   flex-direction: column;
 }
 #start-btn {

@@ -1,8 +1,8 @@
-// document.querySelector("#start-btn").onclick = function () {
-//   document.querySelector("#welcome").style.display = "none";
+document.querySelector("#start-btn").onclick = function () {
+  document.querySelector("#welcome").style.display = "none";
 
-//   document.querySelector("#game-content").style.display = "inherit";
-// };
+  document.querySelector("#game-content").style.display = "flex";
+};
 
 // obj p5.js
 
@@ -73,6 +73,26 @@ function draw() {
 let playing = false;
 let score;
 let finalAnswer;
+let level;
+
+// level
+
+function createLevel() {
+  if ((score = 10)) {
+    level = 2;
+  }
+  if ((score = 20)) {
+    level = 3;
+  }
+  if ((score = 30)) {
+    level = 4;
+  }
+  if ((score = 40)) {
+    level = 5;
+
+    document.getElementById("#levelvalue").innerHTML = level;
+  }
+}
 
 function startGame() {
   if (playing == true) {
@@ -102,22 +122,25 @@ function showBubbles() {
       if (score >= 5 && score < 10) {
         generateHPQuiz(0);
       }
-      if (score >= 11 && score < 15) {
+      if (score >= 10 && score < 15) {
         generateSub();
+        createLevel();
       }
-      if (score >= 16 && score < 20) {
+      if (score >= 15 && score < 20) {
         generateHPQuiz(1);
       }
-      if (score >= 11 && score < 15) {
+      if (score >= 20 && score < 25) {
         generateDivide();
+        createLevel();
       }
-      if (score >= 16 && score < 20) {
+      if (score >= 25 && score < 30) {
         generateHPQuiz(2);
       }
-      if (score >= 11 && score < 15) {
+      if (score >= 30 && score < 35) {
         generateMultiply();
+        createLevel();
       }
-      if (score >= 16 && score < 20) {
+      if (score >= 35 && score < 40) {
         generateHPQuiz(3);
       }
     } else {
