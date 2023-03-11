@@ -14,55 +14,50 @@ body {
 }
 
 #welcome {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin: 100px 20px;
 }
 .intro {
   background-image: url("../images/paper.png");
   background-size: 100%;
   width: 500px;
   height: 720px;
-  margin: 50px 0;
+  margin: 20px 0;
   text-align: center;
 }
 .intro-text {
   color: black;
-  font-size: 18pt;
-
-  padding: 70px 90px;
+  font-size: 17pt;
+  padding: 80px 90px;
 }
 .intro-text h4 {
-  font-size: 17pt;
-}
-
-#game-content {
-  display: none;
-
-  flex-direction: column;
+  font-size: 16pt;
 }
 #start-btn {
   font-size: 25pt;
   color: black;
-
-  width: 400px;
-  height: 100px;
+  width: 200px;
+  height: 60px;
   cursor: pointer;
-  padding: 20px;
   border-color: #0e4124;
-  border-radius: 0.3em;
+  border-radius: 5px;
   background-image: url("../images/paper.png");
   background-position: 500px;
 }
 
+#game-content {
+  display: inherit;
+  flex-direction: column;
+}
+
 .heading {
   font-size: 30pt;
-  color: #d11e15;
-  text-shadow: 2px 2px black;
-  margin: 0;
+  color: #ff0000;
+  text-shadow: 2px 2px rgb(0, 58, 1);
+  margin-bottom: 80px;
   text-align: center;
   font-family: cursive, sans-serif;
 }
@@ -70,7 +65,6 @@ body {
   margin: 40px 0 0 0;
 }
 .heading h4 {
-  font-size: 30pt;
   margin: 0;
 }
 
