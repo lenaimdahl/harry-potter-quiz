@@ -12,7 +12,7 @@ let hogwartsQA = [
   {
     question: "What is the name of Hagrid's boarhound dog?",
     answers: { a: "Fang", b: "Bing", c: "Fluffy", d: "Snoopy" },
-    correctAnswer: "1",
+    correctAnswer: "Fang",
   },
   {
     question: "When is Harrys Birthday?",
@@ -33,11 +33,11 @@ let hogwartsQA = [
     question: "Who sent Harry his Firebolt?",
     answers: {
       a: "Albus Dumbledor",
-      b: "Sirius Black ",
+      b: "Sirius Black",
       c: "Minerva McGonagall",
       d: "Remus Lupin",
     },
-    correctAnswer: "Sirius Black ",
+    correctAnswer: "Sirius Black",
   },
   {
     question: "What kind of pet does Harry own?",

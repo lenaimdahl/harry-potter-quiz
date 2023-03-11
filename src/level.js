@@ -71,9 +71,10 @@ function draw() {
 
 // set up game questions
 let playing = false;
-let score;
+let score = 0;
 let finalAnswer;
-let level;
+let level = 1;
+let HPQuizIndex = 0;
 
 // create random number
 function createRandomNum() {
@@ -99,27 +100,22 @@ document.getElementById("startreset").onclick = startGame;
 // level
 
 function createLevel() {
+  const oldLevel = level;
   if (score === 10) {
     level = 2;
-    document.querySelector("#levelvalue").innerHTML = level;
-    document.querySelector("#level-text").innerHTML =
-      "You reached a new Level!";
   }
   if (score === 20) {
     level = 3;
-    document.querySelector("#levelvalue").innerHTML = level;
-    document.querySelector("#level-text").innerHTML =
-      "You reached a new Level!";
   }
   if (score === 30) {
     level = 4;
-    document.querySelector("#levelvalue").innerHTML = level;
-    document.querySelector("#level-text").innerHTML =
-      "You reached a new Level!";
   }
   if (score === 40) {
     level = 5;
-    document.querySelector("#levelvalue").innerHTML = level;
+  }
+
+  document.querySelector("#levelvalue").innerHTML = level;
+  if (level > oldLevel) {
     document.querySelector("#level-text").innerHTML =
       "You reached a new Level!";
   }
@@ -129,6 +125,7 @@ function showBubbles() {
   if (playing == true) {
     if (this.innerHTML == finalAnswer) {
       score++;
+      document.querySelector("#level-text").innerHTML = "";
       document.getElementById("scorevalue").innerHTML = score;
       document.getElementById("hermine").innerHTML = "correct!";
       document.getElementById("ron").innerHTML = "Sure Hermine?";
@@ -139,25 +136,25 @@ function showBubbles() {
         generateAdd();
       }
       if (score >= 5 && score < 10) {
-        generateHPQuiz(0);
+        generateHPQuiz();
       }
       if (score >= 10 && score < 15) {
         generateSub();
       }
       if (score >= 15 && score < 20) {
-        generateHPQuiz(1);
+        generateHPQuiz();
       }
       if (score >= 20 && score < 25) {
         generateDivide();
       }
       if (score >= 25 && score < 30) {
-        generateHPQuiz(2);
+        generateHPQuiz();
       }
       if (score >= 30 && score < 35) {
         generateMultiply();
       }
       if (score >= 35 && score < 40) {
-        generateHPQuiz(3);
+        generateHPQuiz();
       }
     } else {
       document.getElementById("ron").innerHTML = "That's right!";
@@ -268,13 +265,14 @@ function generateMultiply() {
 
 //hogwarts questions
 
-function generateHPQuiz(index) {
-  showQuestion(hogwartsQA[index].question);
+function generateHPQuiz() {
+  showQuestion(hogwartsQA[HPQuizIndex].question);
   showChoices(
-    hogwartsQA[index].answers.a,
-    hogwartsQA[index].answers.b,
-    hogwartsQA[index].answers.c,
-    hogwartsQA[index].answers.d
+    hogwartsQA[HPQuizIndex].answers.a,
+    hogwartsQA[HPQuizIndex].answers.b,
+    hogwartsQA[HPQuizIndex].answers.c,
+    hogwartsQA[HPQuizIndex].answers.d
   );
-  finalAnswer = hogwartsQA[index].correctAnswer;
+  finalAnswer = hogwartsQA[HPQuizIndex].correctAnswer;
+  HPQuizIndex++;
 }
