@@ -72,6 +72,7 @@ function draw() {
 // set up game questions
 let playing = false;
 let score = 0;
+let chance = 10;
 let finalAnswer;
 let level = 1;
 let HPQuizIndex = 0;
@@ -139,6 +140,11 @@ function startCountdown() {
       document.querySelector("#question-text").style.display = "none";
       document.querySelector("#game-over").style.display = "inherit";
     }
+    if (chance === 0) {
+      stopCountdown();
+      document.querySelector("#question-text").style.display = "none";
+      document.querySelector("#game-over").style.display = "inherit";
+    }
   }, 1000);
 }
 
@@ -192,8 +198,11 @@ function checkAnswer() {
         document.querySelector("#chamber-secrets").style.display = "inherit";
         stopCountdown();
       }
+
       resetCountdown();
     } else {
+      chance--;
+      document.querySelector("#chancevalue").innerHTML = chance;
       document.getElementById("ron").innerHTML = "That's right!";
       document.getElementById("hermine").innerHTML = "No ron, it's not right!";
     }
