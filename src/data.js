@@ -111,4 +111,74 @@ let hogwartsQA = [
     },
     correctAnswer: "The Burrow",
   },
+  {
+    question: "What is Dean Thomas's favorite sport?",
+    answers: {
+      a: "Soccer",
+      b: "Quidditsch",
+      c: "Basketball",
+      d: "Swimming",
+    },
+    correctAnswer: "Soccer",
+  },
+  {
+    question: "What kind of magical creature is Aragog?",
+    answers: {
+      a: "Acromantula",
+      b: "Aramula",
+      c: "Romantula",
+      d: "Cramuntula",
+    },
+    correctAnswer: "Acromantula",
+  },
+  {
+    question: "Where is the entrance to the Chamber of Secrets hidden?",
+    answers: {
+      a: "The boys' bathroom",
+      b: "The invisible room",
+      c: "The girls' bathroom",
+      d: "The great Hall",
+    },
+    correctAnswer: "The girls' bathroom",
+  },
+  {
+    question: "How many players are on a Quidditch team?",
+    answers: {
+      a: "7",
+      b: "6",
+      c: "8",
+      d: "9",
+    },
+    correctAnswer: "7",
+  },
+  {
+    question: "What kind of wood is Harry's first wand made out of?",
+    answers: {
+      a: "Phoenix feathe",
+      b: "Holly",
+      c: "Dragon heartstringss",
+      d: "Unicorn hair",
+    },
+    correctAnswer: "Holly",
+  },
+  {
+    question: "What are the names of Harry's father?",
+    answers: {
+      a: "Gordon",
+      b: "James",
+      c: "Simon",
+      d: "Freddric",
+    },
+    correctAnswer: "James",
+  },
+  {
+    question: "Who is no friend of Harry Potter?",
+    answers: {
+      a: "Ron",
+      b: "Draco",
+      c: "Neville",
+      d: "Ginny",
+    },
+    correctAnswer: "Draco",
+  },
 ];
