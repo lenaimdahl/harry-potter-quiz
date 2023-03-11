@@ -27,16 +27,16 @@ body {
   width: 500px;
   height: 720px;
   margin: 50px 0;
+  text-align: center;
 }
 .intro-text {
-  color: #d11e15;
-  font-size: 25pt;
-  text-align: center;
+  color: black;
+  font-size: 18pt;
+
   padding: 70px 90px;
 }
 .intro-text h4 {
-  text-align: left;
-  font-size: 20pt;
+  font-size: 17pt;
 }
 
 #game-content {
@@ -46,7 +46,8 @@ body {
 }
 #start-btn {
   font-size: 25pt;
-  color: #d11e15;
+  color: black;
+
   width: 400px;
   height: 100px;
   cursor: pointer;
@@ -60,6 +61,7 @@ body {
 .heading {
   font-size: 30pt;
   color: #d11e15;
+  text-shadow: 2px 2px black;
   margin: 0;
   text-align: center;
   font-family: cursive, sans-serif;
@@ -204,6 +206,7 @@ body {
   cursor: pointer;
   text-align: center;
   position: relative;
+  text-shadow: 2px 2px black;
 }
 
 .footer {

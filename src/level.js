@@ -121,7 +121,7 @@ function createLevel() {
   }
 }
 
-function showBubbles() {
+function checkAnswer() {
   if (playing == true) {
     if (this.innerHTML == finalAnswer) {
       score++;
@@ -164,7 +164,7 @@ function showBubbles() {
 }
 
 for (i = 0; i < 4; i++) {
-  document.getElementById("box" + i).onclick = showBubbles;
+  document.getElementById("box" + i).onclick = checkAnswer;
 }
 
 function showChoices(correctAnswer, choice2, choice3, choice4) {
