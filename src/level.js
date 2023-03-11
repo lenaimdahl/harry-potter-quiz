@@ -75,25 +75,12 @@ let score;
 let finalAnswer;
 let level;
 
-// level
-
-function createLevel() {
-  if ((score = 10)) {
-    level = 2;
-  }
-  if ((score = 20)) {
-    level = 3;
-  }
-  if ((score = 30)) {
-    level = 4;
-  }
-  if ((score = 40)) {
-    level = 5;
-
-    document.getElementById("#levelvalue").innerHTML = level;
-  }
+// create random number
+function createRandomNum() {
+  return 1 + Math.round(19 * Math.random());
 }
 
+//start the game
 function startGame() {
   if (playing == true) {
     location.reload();
@@ -109,6 +96,35 @@ function startGame() {
 }
 document.getElementById("startreset").onclick = startGame;
 
+// level
+
+function createLevel() {
+  if (score === 10) {
+    level = 2;
+    document.querySelector("#levelvalue").innerHTML = level;
+    document.querySelector("#level-text").innerHTML =
+      "You reached a new Level!";
+  }
+  if (score === 20) {
+    level = 3;
+    document.querySelector("#levelvalue").innerHTML = level;
+    document.querySelector("#level-text").innerHTML =
+      "You reached a new Level!";
+  }
+  if (score === 30) {
+    level = 4;
+    document.querySelector("#levelvalue").innerHTML = level;
+    document.querySelector("#level-text").innerHTML =
+      "You reached a new Level!";
+  }
+  if (score === 40) {
+    level = 5;
+    document.querySelector("#levelvalue").innerHTML = level;
+    document.querySelector("#level-text").innerHTML =
+      "You reached a new Level!";
+  }
+}
+
 function showBubbles() {
   if (playing == true) {
     if (this.innerHTML == finalAnswer) {
@@ -116,6 +132,9 @@ function showBubbles() {
       document.getElementById("scorevalue").innerHTML = score;
       document.getElementById("hermine").innerHTML = "correct!";
       document.getElementById("ron").innerHTML = "Sure Hermine?";
+
+      createLevel();
+
       if (score < 5) {
         generateAdd();
       }
@@ -124,21 +143,18 @@ function showBubbles() {
       }
       if (score >= 10 && score < 15) {
         generateSub();
-        createLevel();
       }
       if (score >= 15 && score < 20) {
         generateHPQuiz(1);
       }
       if (score >= 20 && score < 25) {
         generateDivide();
-        createLevel();
       }
       if (score >= 25 && score < 30) {
         generateHPQuiz(2);
       }
       if (score >= 30 && score < 35) {
         generateMultiply();
-        createLevel();
       }
       if (score >= 35 && score < 40) {
         generateHPQuiz(3);
@@ -187,77 +203,65 @@ function showQuestion(text) {
 //Math Fumctions
 //divide
 function generateDivide() {
-  let num1 = 1 + Math.round(19 / Math.random());
-  let num2 = 1 + Math.round(19 / Math.random());
+  let num1 = createRandomNum();
+  let num2 = createRandomNum();
   let correctAnswer = num1 / num2;
   finalAnswer = correctAnswer;
 
   showQuestion(`${num1} / ${num2}`);
 
   let choice1 = correctAnswer;
-  let choice2 =
-    1 + Math.round(9 * Math.random()) / (1 + Math.round(9 * Math.random()));
-  let choice3 =
-    1 + Math.round(9 * Math.random()) / (1 + Math.round(9 * Math.random()));
-  let choice4 =
-    1 + Math.round(9 * Math.random()) / (1 + Math.round(9 * Math.random()));
+  let choice2 = createRandomNum() / createRandomNum();
+  let choice3 = createRandomNum() / createRandomNum();
+  let choice4 = createRandomNum() / createRandomNum();
 
   showChoices(choice1, choice2, choice3, choice4);
 }
 //add
 function generateAdd() {
-  let num1 = 1 + Math.round(19 + Math.random());
-  let num2 = 1 + Math.round(19 + Math.random());
+  let num1 = createRandomNum();
+  let num2 = createRandomNum();
   let correctAnswer = num1 + num2;
   finalAnswer = correctAnswer;
 
   showQuestion(`${num1} + ${num2}`);
 
   let choice1 = correctAnswer;
-  let choice2 =
-    1 + Math.round(9 * Math.random()) + (1 + Math.round(9 * Math.random()));
-  let choice3 =
-    1 + Math.round(9 * Math.random()) + (1 + Math.round(9 * Math.random()));
-  let choice4 =
-    1 + Math.round(9 * Math.random()) + (1 + Math.round(9 * Math.random()));
+  let choice2 = createRandomNum() + createRandomNum();
+  let choice3 = createRandomNum() + createRandomNum();
+  let choice4 = createRandomNum() + createRandomNum();
 
   showChoices(choice1, choice2, choice3, choice4);
 }
 //substract
 function generateSub() {
-  let num1 = 1 + Math.round(19 - Math.random());
-  let num2 = 1 + Math.round(19 - Math.random());
+  let num1 = createRandomNum();
+  let num2 = createRandomNum();
   let correctAnswer = num1 - num2;
   finalAnswer = correctAnswer;
 
   showQuestion(`${num1} - ${num2}`);
 
   let choice1 = correctAnswer;
-  let choice2 =
-    1 + Math.round(9 * Math.random()) - (1 + Math.round(9 * Math.random()));
-  let choice3 =
-    1 + Math.round(9 * Math.random()) - (1 + Math.round(9 * Math.random()));
-  let choice4 =
-    1 + Math.round(9 * Math.random()) - (1 + Math.round(9 * Math.random()));
+  let choice2 = createRandomNum() - createRandomNum();
+  let choice3 = createRandomNum() - createRandomNum();
+  let choice4 = createRandomNum() - createRandomNum();
 
   showChoices(choice1, choice2, choice3, choice4);
 }
 //multiply
 function generateMultiply() {
-  let num1 = 1 + Math.round(19 * Math.random());
-  let num2 = 1 + Math.round(19 * Math.random());
+  let num1 = createRandomNum();
+  let num2 = createRandomNum();
   let correctAnswer = num1 * num2;
   finalAnswer = correctAnswer;
 
   showQuestion(`${num1} * ${num2}`);
 
   let choice1 = correctAnswer;
-  let choice2 =
-    1 + Math.round(9 * Math.random()) * (1 + Math.round(9 * Math.random()));
-  let choice3 =
-    1 + Math.round(9 * Math.random()) * (1 + Math.round(9 * Math.random()));
-  let choice4 =
-    1 + Math.round(9 * Math.random()) * (1 + Math.round(9 * Math.random()));
+  let choice2 = createRandomNum() * createRandomNum();
+  let choice3 = createRandomNum() * createRandomNum();
+  let choice4 = createRandomNum() * createRandomNum();
 
   showChoices(choice1, choice2, choice3, choice4);
 }
