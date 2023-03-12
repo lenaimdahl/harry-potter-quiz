@@ -1,22 +1,33 @@
-document.querySelector("#open-btn").onclick = function () {
+//enter first page
+
+document.querySelector("#reveal-btn").onclick = function () {
+  document.querySelector("#welcome").style.display = "flex";
+  document.querySelector("#reveal-btn").style.display = "none";
+};
+
+//enter welcome text
+
+document.querySelector("#reveal-btn").onclick = function () {
+  document.querySelector(".intro").style.display = "inherit";
   document.querySelector(".intro-text").style.display = "inherit";
   document.querySelector("#start-btn").style.display = "flex";
-  document.querySelector("#open-btn").style.display = "none";
+  document.querySelector("#beginning").style.display = "none";
   let song = document.getElementById("mySong");
   song.play();
 };
-
+//enter game content
 document.querySelector("#start-btn").onclick = function () {
   document.querySelector("#welcome").style.display = "none";
+  document.querySelector("canvas").style.display = "inherit";
   document.querySelector("#game-content").style.display = "flex";
 };
-
+//credits open
 document.querySelector("#credits-open-btn").onclick = function () {
   document.querySelector(".credits").style.display = "inherit";
   document.querySelector("#credits-open-btn").style.display = "none";
   document.querySelector("#credits-close-btn").style.display = "inherit";
 };
-
+//credits close
 document.querySelector("#credits-close-btn").onclick = function () {
   document.querySelector(".credits").style.display = "none";
   document.querySelector("#credits-close-btn").style.display = "none";
