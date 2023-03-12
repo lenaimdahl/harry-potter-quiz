@@ -56,7 +56,6 @@ canvas {
   text-align: center;
 }
 .intro-text {
-  display: none;
   color: black;
   font-size: 17pt;
   padding: 80px 90px;
@@ -64,15 +63,14 @@ canvas {
 .intro-text h4 {
   font-size: 16pt;
 }
-#start-btn {
+#enter-btn {
   display: none;
-  font-size: 25pt;
-  color: black;
+
+  padding-top: 10px;
   width: 200px;
   height: 60px;
-  margin: 0;
-  padding-top: 10px;
-  justify-content: center;
+  font-size: 25pt;
+  color: black;
   cursor: pointer;
   border-color: #0e4124;
   border-radius: 5px;

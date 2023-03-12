@@ -1,22 +1,18 @@
 //enter first page
 
 document.querySelector("#reveal-btn").onclick = function () {
-  document.querySelector("#welcome").style.display = "flex";
-  document.querySelector("#reveal-btn").style.display = "none";
-};
-
-//enter welcome text
-
-document.querySelector("#reveal-btn").onclick = function () {
-  document.querySelector(".intro").style.display = "inherit";
-  document.querySelector(".intro-text").style.display = "inherit";
-  document.querySelector("#start-btn").style.display = "flex";
   document.querySelector("#beginning").style.display = "none";
+  document.querySelector("#welcome").style.display = "flex";
+  document.querySelector("#enter-btn").style.display = "inherit";
+
   let song = document.getElementById("mySong");
   song.play();
 };
-//enter game content
-document.querySelector("#start-btn").onclick = function () {
+
+//enter game
+
+document.querySelector("#enter-btn").onclick = function () {
+  document.querySelector("#enter-btn").style.display = "none";
   document.querySelector("#welcome").style.display = "none";
   document.querySelector("canvas").style.display = "inherit";
   document.querySelector("#game-content").style.display = "flex";
