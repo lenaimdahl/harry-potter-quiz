@@ -16,26 +16,36 @@ document.querySelector("#enter-btn").onclick = function () {
   document.querySelector("#welcome").style.display = "none";
   document.querySelector("canvas").style.display = "inherit";
   document.querySelector("#game-content").style.display = "flex";
+  document.body.style.backgroundImage = `url("/images/hall.WEBP")`;
 };
-//credits open
-document.querySelector("#credits-open-btn").onclick = function () {
-  document.querySelector(".credits").style.display = "inherit";
-  document.querySelector("#credits-open-btn").style.display = "none";
-  document.querySelector("#credits-close-btn").style.display = "inherit";
+//disclaimer open
+document.querySelector("#disclaimer-open-btn").onclick = function () {
+  document.querySelector(".disclaimer").style.display = "inherit";
+  document.querySelector("#disclaimer-open-btn").style.display = "none";
+  document.querySelector("#disclaimer-close-btn").style.display = "inherit";
 };
-//credits close
-document.querySelector("#credits-close-btn").onclick = function () {
-  document.querySelector(".credits").style.display = "none";
-  document.querySelector("#credits-close-btn").style.display = "none";
-  document.querySelector("#credits-open-btn").style.display = "inherit";
+//disclaimer close
+document.querySelector("#disclaimer-close-btn").onclick = function () {
+  document.querySelector(".disclaimer").style.display = "none";
+  document.querySelector("#disclaimer-close-btn").style.display = "none";
+  document.querySelector("#disclaimer-open-btn").style.display = "inherit";
 };
 // obj p5.js
 
 let speedX = 2.5;
 let speedY = 2.6;
 
+let imgSnitch;
+let key1 = { x: 0, y: 0 };
+let key2 = { x: 0, y: 0 };
+let key3 = { x: 0, y: 0 };
+let key4 = { x: 0, y: 0 };
+let key5 = { x: 0, y: 0 };
+let key6 = { x: 0, y: 0 };
+let key7 = { x: 0, y: 0 };
+let key8 = { x: 0, y: 0 };
+let key9 = { x: 0, y: 0 };
 let snitch = { x: 0, y: 0 };
-let key = { x: 0, y: 0 };
 
 function preload() {
   imgSnitch = loadImage("images/snitch.png");
@@ -63,42 +73,42 @@ function setup() {
   key3.y = 60;
   key4.x = 100;
   key4.y = 90;
-  key5.x = 900;
+  key5.x = 500;
   key5.y = 150;
-  key6.x = 1050;
+  key6.x = 700;
   key6.y = 100;
-  key7.x = 1000;
-  key7.y = 1000;
-  key8.x = 900;
-  key8.y = 1050;
-  key9.x = 900;
-  key9.y = 610;
+  key7.x = 350;
+  key7.y = 300;
+  key8.x = 400;
+  key8.y = 210;
+  key9.x = 600;
+  key9.y = 40;
 }
 
 function draw() {
   clear();
   background("rgba(255,255,255, 0)");
 
-  snitch.x = constrain(snitch.x, 10, 700);
-  snitch.y = constrain(snitch.y, 10, 400);
-  key1.x = constrain(key1.x, 10, 700);
-  key1.y = constrain(key1.y, 10, 300);
-  key2.x = constrain(key2.x, 10, 700);
-  key2.y = constrain(key2.y, 10, 300);
-  key3.x = constrain(key3.x, 10, 700);
-  key3.y = constrain(key3.y, 10, 300);
-  key4.x = constrain(key4.x, 10, 700);
-  key4.y = constrain(key4.y, 10, 300);
-  key5.x = constrain(key5.x, 10, 700);
-  key5.y = constrain(key5.y, 10, 300);
-  key6.x = constrain(key6.x, 10, 700);
-  key6.y = constrain(key6.y, 10, 300);
-  key7.x = constrain(key7.x, 10, 700);
-  key7.y = constrain(key7.y, 10, 300);
-  key8.x = constrain(key8.x, 10, 700);
-  key8.y = constrain(key8.y, 10, 300);
-  key9.x = constrain(key9.x, 10, 700);
-  key9.y = constrain(key9.y, 10, 300);
+  snitch.x = constrain(snitch.x, 10, windowWidth - 10);
+  snitch.y = constrain(snitch.y, 10, windowWidth - 10);
+  key1.x = constrain(key1.x, 10, windowWidth - 10);
+  key1.y = constrain(key1.y, 10, windowWidth - 10);
+  key2.x = constrain(key2.x, 10, windowWidth - 10);
+  key2.y = constrain(key2.y, 10, windowWidth - 10);
+  key3.x = constrain(key3.x, 10, windowWidth - 10);
+  key3.y = constrain(key3.y, 10, windowWidth - 10);
+  key4.x = constrain(key4.x, 10, windowWidth - 10);
+  key4.y = constrain(key4.y, 10, windowWidth - 10);
+  key5.x = constrain(key5.x, 10, windowWidth - 10);
+  key5.y = constrain(key5.y, 10, windowWidth - 10);
+  key6.x = constrain(key6.x, 10, windowWidth - 10);
+  key6.y = constrain(key6.y, 10, windowWidth - 10);
+  key7.x = constrain(key7.x, 10, windowWidth - 10);
+  key7.y = constrain(key7.y, 10, windowWidth - 10);
+  key8.x = constrain(key8.x, 10, windowWidth - 10);
+  key8.y = constrain(key8.y, 10, windowWidth - 10);
+  key9.x = constrain(key9.x, 10, windowWidth - 10);
+  key9.y = constrain(key9.y, 10, windowWidth - 10);
 
   image(imgSnitch, snitch.x, snitch.y, 50, 50);
   image(key1, key1.x, key1.y, 40, 40);

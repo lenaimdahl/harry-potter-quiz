@@ -279,42 +279,38 @@ canvas {
   left: 0;
   bottom: 0;
   width: 100%;
-  padding: 10px;
+  padding: 5px;
   background-color: black;
   z-index: 99;
 }
 
-.credits-open-btn {
+#disclaimer-open-btn,
+#disclaimer-close-btn {
   font-size: 15pt;
-  color: rgb(120, 116, 116);
-  width: 150px;
-  height: 50px;
+  color: rgb(139, 124, 124);
+  width: 160px;
+  height: 30px;
   cursor: pointer;
   border-color: #9d9b96;
   background-color: black;
-  text-align: left;
+  text-align: center;
   display: inherit;
+  border-color: #050505;
+  background-image: url("../images/tafel.avif");
+  background-position: 500px;
 }
-.credits-close-btn {
-  font-size: 15pt;
-  color: rgb(120, 116, 116);
-  width: 150px;
-  height: 50px;
-  cursor: pointer;
-  border-color: #9d9b96;
-  background-color: black;
-  text-align: left;
+#disclaimer-close-btn {
   display: none;
 }
 
-.credits {
+.disclaimer {
   display: none;
 }
 .banner {
   text-align: center;
 }
 .banner img {
-  height: 70px;
+  height: 60px;
 }
 
 #game-over {
