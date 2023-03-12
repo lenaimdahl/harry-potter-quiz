@@ -17,7 +17,7 @@ document.querySelector("#enter-btn").onclick = function () {
   document.querySelector("#welcome").style.display = "none";
   document.querySelector("canvas").style.display = "inherit";
   document.querySelector("#game-content").style.display = "flex";
-  document.body.style.backgroundImage = `url("/images/hall.WEBP")`;
+  document.body.style.backgroundImage = `url("./images/hall.jpg")`;
 };
 //disclaimer open
 document.querySelector("#disclaimer-open-btn").onclick = function () {
@@ -251,7 +251,7 @@ function resetCountdown() {
 }
 
 function finishGame() {
-  document.body.style.backgroundImage = `url("../images/Chamber Kopie.jpg")`;
+  document.body.style.backgroundImage = `url("../images/chamber2.jpg")`;
   document.querySelector("canvas").style.display = "none";
   document.querySelector(".activity-field").style.display = "none";
 

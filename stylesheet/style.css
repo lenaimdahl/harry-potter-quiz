@@ -1,11 +1,11 @@
 @font-face {
-  font-family: "CustomFont";
-  src: url(../fonts/Chalk-Regular.ttf);
+  font-family: "Chalk";
+  src: url("../fonts/chalk-regular.ttf");
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-image: url("../images/Chamber.jpeg");
+  background-image: url("../images/chamber.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -96,7 +96,7 @@ canvas {
   padding-top: 10px;
   width: 200px;
   height: 60px;
-  font-family: "CustomFont";
+  font-family: "Chalk";
   font-size: 40pt;
   font-weight: bold;
   color: rgb(0, 0, 0);
@@ -159,11 +159,11 @@ canvas {
   border-width: 7px;
   border-style: solid;
   border-radius: 5px;
-  background-image: url("../images/tafel.avif");
+  background-image: url("../images/tafel.jpg");
   color: #fff;
   margin-top: 20px;
   margin-bottom: 70px;
-  font-family: "CustomFont", cursive;
+  font-family: "Chalk", cursive;
   max-width: 800px;
 }
 .figure-2 {
@@ -322,7 +322,7 @@ canvas {
   text-align: center;
   display: inherit;
   border-color: #050505;
-  background-image: url("../images/tafel.avif");
+  background-image: url("../images/tafel.jpg");
   background-position: 500px;
 }
 #disclaimer-close-btn {
