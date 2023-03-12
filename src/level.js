@@ -157,6 +157,14 @@ function resetCountdown() {
   startCountdown();
 }
 
+function finishGame() {
+  document.querySelector("#question-text").style.display = "none";
+  document.querySelector("#choices").style.display = "none";
+  document.querySelector("#game-over").style.display = "none";
+  stopCountdown();
+  document.body.style.backgroundImage = `url("../images/Chamber Kopie.jpg")`;
+}
+
 function checkAnswer() {
   if (playing == true) {
     if (this.innerHTML == finalAnswer) {
@@ -193,11 +201,7 @@ function checkAnswer() {
         generateHPQuiz();
       }
       if (score === 40) {
-        document.querySelector("#question-text").style.display = "none";
-        document.querySelector("#choices").style.display = "none";
-        document.querySelector("#game-over").style.display = "none";
-        document.querySelector("#chamber-secrets").style.display = "inherit";
-        stopCountdown();
+        finishGame();
       } else {
         resetCountdown();
       }
