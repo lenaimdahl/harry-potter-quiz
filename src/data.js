@@ -25,7 +25,7 @@ let hogwartsQA = [
     correctAnswer: "July 31",
   },
   {
-    question: "What is Harrysmiddle name?",
+    question: "What is Harry's middle name?",
     answers: { a: "James", b: "Sirius", c: "Albus", d: "Godric" },
     correctAnswer: "James",
   },
@@ -45,7 +45,7 @@ let hogwartsQA = [
     correctAnswer: "Owl",
   },
   {
-    question: "What is the name of Harrys aunt?",
+    question: "What is the name of Harry's aunt?",
     answers: { a: "Petunia", b: "Beatrice", c: "Minerva", d: "Lavender" },
     correctAnswer: "Petunia",
   },
@@ -115,7 +115,7 @@ let hogwartsQA = [
     question: "What is Dean Thomas's favorite sport?",
     answers: {
       a: "Soccer",
-      b: "Quidditsch",
+      b: "Quidditch",
       c: "Basketball",
       d: "Swimming",
     },
@@ -137,7 +137,7 @@ let hogwartsQA = [
       a: "The boys' bathroom",
       b: "The invisible room",
       c: "The girls' bathroom",
-      d: "The great Hall",
+      d: "The great hall",
     },
     correctAnswer: "The girls' bathroom",
   },
@@ -154,15 +154,15 @@ let hogwartsQA = [
   {
     question: "What kind of wood is Harry's first wand made out of?",
     answers: {
-      a: "Phoenix feathe",
+      a: "Phoenix feather",
       b: "Holly",
-      c: "Dragon heartstringss",
+      c: "Dragon heartstrings",
       d: "Unicorn hair",
     },
     correctAnswer: "Holly",
   },
   {
-    question: "What are the names of Harry's father?",
+    question: "What is the name of Harry's father?",
     answers: {
       a: "Gordon",
       b: "James",
@@ -172,22 +172,12 @@ let hogwartsQA = [
     correctAnswer: "James",
   },
   {
-    question: "Who is no friend of Harry Potter?",
-    answers: {
-      a: "Ron",
-      b: "Draco",
-      c: "Neville",
-      d: "Ginny",
-    },
-    correctAnswer: "Draco",
-  },
-  {
     question: "What animal can Harry speak to?",
     answers: {
       a: "Spider",
       b: "Dragon",
       c: "Snake",
-      d: "Qwl",
+      d: "Owl",
     },
     correctAnswer: "Snake",
   },

@@ -1,6 +1,7 @@
 //enter first page
 
 document.querySelector("#reveal-btn").onclick = function () {
+  document.querySelector("#dark").style.display = "block";
   document.querySelector("#beginning").style.display = "none";
   document.querySelector("#welcome").style.display = "flex";
   document.querySelector("#enter-btn").style.display = "inherit";
@@ -65,22 +66,31 @@ function setup() {
 
   snitch.x = 350;
   snitch.y = 200;
+
   key1.x = 250;
   key1.y = 100;
+
   key2.x = 550;
   key2.y = 200;
+
   key3.x = 700;
   key3.y = 60;
+
   key4.x = 100;
   key4.y = 90;
+
   key5.x = 500;
   key5.y = 150;
+
   key6.x = 700;
   key6.y = 100;
+
   key7.x = 350;
   key7.y = 300;
+
   key8.x = 400;
   key8.y = 210;
+
   key9.x = 600;
   key9.y = 40;
 }
@@ -252,7 +262,7 @@ function finishGame() {
 
   stopCountdown();
 
-  document.getElementById("hermine").innerHTML = "Congrats. You did it!";
+  document.getElementById("hermione").innerHTML = "Congrats. You did it!";
   document.getElementById("ron").innerHTML = "Thank you!";
 }
 
@@ -262,8 +272,8 @@ function checkAnswer() {
       score++;
       document.querySelector("#level-text").innerHTML = "";
       document.getElementById("scorevalue").innerHTML = score;
-      document.getElementById("hermine").innerHTML = "correct!";
-      document.getElementById("ron").innerHTML = "Sure Hermine?";
+      document.getElementById("hermione").innerHTML = "correct!";
+      document.getElementById("ron").innerHTML = "Sure Hermione?";
 
       createLevel();
 
@@ -300,7 +310,8 @@ function checkAnswer() {
       chance--;
       document.querySelector("#chancevalue").innerHTML = chance;
       document.getElementById("ron").innerHTML = "That's right!";
-      document.getElementById("hermine").innerHTML = "No ron, it's not right!";
+      document.getElementById("hermione").innerHTML =
+        "No, Ron, that's not right!";
     }
   }
 }

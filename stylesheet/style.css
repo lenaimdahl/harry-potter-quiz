@@ -17,6 +17,31 @@ canvas {
   z-index: -1;
 }
 
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+#dark {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  display: none;
+  animation: fadeOut 5s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  pointer-events: none;
+}
+
 #beginning {
   display: flex;
   justify-content: center;
@@ -28,6 +53,7 @@ canvas {
   bottom: 350px;
   left: 430px;
 }
+
 #reveal-btn {
   font-size: 20pt;
   color: rgb(255, 0, 0);
@@ -281,7 +307,7 @@ canvas {
   width: 100%;
   padding: 5px;
   background-color: black;
-  z-index: 99;
+  z-index: 98;
 }
 
 #disclaimer-open-btn,
