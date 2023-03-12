@@ -1,9 +1,27 @@
+document.querySelector("#open-btn").onclick = function () {
+  document.querySelector(".intro-text").style.display = "inherit";
+  document.querySelector("#start-btn").style.display = "flex";
+  document.querySelector("#open-btn").style.display = "none";
+  let song = document.getElementById("mySong");
+  song.play();
+};
+
 document.querySelector("#start-btn").onclick = function () {
   document.querySelector("#welcome").style.display = "none";
-
   document.querySelector("#game-content").style.display = "flex";
 };
 
+document.querySelector("#credits-open-btn").onclick = function () {
+  document.querySelector(".credits").style.display = "inherit";
+  document.querySelector("#credits-open-btn").style.display = "none";
+  document.querySelector("#credits-close-btn").style.display = "inherit";
+};
+
+document.querySelector("#credits-close-btn").onclick = function () {
+  document.querySelector(".credits").style.display = "none";
+  document.querySelector("#credits-close-btn").style.display = "none";
+  document.querySelector("#credits-open-btn").style.display = "inherit";
+};
 // obj p5.js
 
 let speedX = 2.5;
@@ -158,11 +176,19 @@ function resetCountdown() {
 }
 
 function finishGame() {
-  document.querySelector("#question-text").style.display = "none";
-  document.querySelector("#choices").style.display = "none";
-  document.querySelector("#game-over").style.display = "none";
-  stopCountdown();
   document.body.style.backgroundImage = `url("../images/Chamber Kopie.jpg")`;
+  document.querySelector("canvas").style.display = "none";
+  document.querySelector(".activity-field").style.display = "none";
+
+  let textEndingGame = document.querySelector(".heading");
+  textEndingGame.innerHTML = "You entered the Chamber of Secrets";
+  textEndingGame.style.fontSize = "40pt";
+  textEndingGame.style.marginTop = "500px";
+
+  stopCountdown();
+
+  document.getElementById("hermine").innerHTML = "Congrats. You did it!";
+  document.getElementById("ron").innerHTML = "Thank you!";
 }
 
 function checkAnswer() {
