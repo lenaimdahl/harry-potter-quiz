@@ -1,6 +1,4 @@
-# nerd-quiz
-
-Harry Potter Chamber of Secrets Quiz Game
+# Harry Potter Chamber of Secrets Quiz Game
 
 ## Introduction
 
@@ -8,18 +6,19 @@ This is a quiz game developed in JavaScript about the Chamber of Secrets from Ha
 
 ## Installation
 
-To play the game, you will need to clone this repository and open the index.html file in your preferred web browser. You can also play it online by clicking [here](https://lenaimdahl.github.io/nerd-quiz).
+To play the game, you will need to clone this repository and open the `index.html` file in your preferred web browser. You can also play it online by clicking [here](https://lenaimdahl.github.io/harry-potter-quiz).
 
 ## How to Play
 
-Clone or download this repository to your local machine.
-Open the index.html file in your web browser.
-Click on the "Start Game" button to begin.
-You will be presented with a math question. Solve it and click on the "Submit" button.
-If your answer is correct, you will move on to the Harry Potter trivia section. If your answer is incorrect, you will be given another math question to solve.
-In the Harry Potter trivia section, you will be asked a series of questions about the Harry Potter world. Answer each question and click on the "Submit" button.
-If your answer is correct, you will earn a point. If your answer is incorrect, you will not earn a point.
-The game will end when you have answered all of the Harry Potter trivia questions.
+1. Clone or download this repository to your local machine.
+1. Open the `index.html` file in your web browser.
+1. Click on the "Revelio" button and then the "Enter" button to enter the game.
+1. Start the game by clicking the "Start game" button.
+1. You will be presented with a math question. Solve it by clicking on the correct answer.
+1. If your answer is correct, you will move on to the Harry Potter trivia section.
+1. In the Harry Potter trivia section, you will be asked a series of questions about the Harry Potter world. Answer each question and click on the "Submit" button.
+1. If your answer is correct, you will earn a point. If your answer is incorrect, you will not earn a point.
+1. The game will end when you have answered all of the Harry Potter trivia questions.
 
 ## Levels
 
@@ -33,14 +32,14 @@ In the second level, the player needs to answer five Harry Potter trivia questio
 
 ## Technology Used
 
-The game was developed using HTML, CSS, and JavaScript. No additional frameworks or libraries were used.
+The game was developed using HTML, CSS, and JavaScript. The [p5.js](https://p5js.org/) library was used for generating animations.
 
 ## Acknowledgments
 
 The game was inspired by the Chamber of Secrets book from the Harry Potter series by J.K. Rowling.
 The animations are generated with the help of the [p5.js](https://p5js.org/) library.
-The Harry Potter trivia questions were taken from the Harry Potter Wiki website.
+The Harry Potter trivia questions were taken from the Harry Potter books.
 
 ## Author
 
-This game was created by Lena Imdahl. If you have any questions or feedback, please feel free to open an issue. 🙂
+This game was created by [Lena Imdahl](https://github.com/lenaimdahl). If you have any questions or feedback, please feel free to [open an issue](https://github.com/lenaimdahl/harry-potter-quiz/issues). 🙂
