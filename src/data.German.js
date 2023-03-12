@@ -1,6 +1,6 @@
 let hogwartsQA = [
   {
-    question: "In what house is Pansy Parkinson?",
+    question: "In welchem Haus ist Pansy Parkinson?",
     answers: {
       a: "Gryffindor",
       b: "Ravenclaw",
@@ -10,27 +10,27 @@ let hogwartsQA = [
     correctAnswer: "Slytherin",
   },
   {
-    question: "What is the name of Hagrid's boarhound dog?",
+    question: "Wie heißt Hagrids Dogge?",
     answers: { a: "Fang", b: "Bing", c: "Fluffy", d: "Snoopy" },
     correctAnswer: "Fang",
   },
   {
-    question: "When is Harrys Birthday?",
+    question: "Wann hat Harry Geburtstag?",
     answers: {
-      a: "August 15",
-      b: "January 30",
-      c: "July 31",
-      d: "Juni 25",
+      a: "15. August",
+      b: "30. Januar",
+      c: "31. Juli",
+      d: "25. Juni",
     },
-    correctAnswer: "July 31",
+    correctAnswer: "31. Juli",
   },
   {
-    question: "What is Harry's middle name?",
+    question: "Wie lautet Harrys zweiter Vorname?",
     answers: { a: "James", b: "Sirius", c: "Albus", d: "Godric" },
     correctAnswer: "James",
   },
   {
-    question: "Who sent Harry his Firebolt?",
+    question: "Wer hat Harry seinen Feuerblitz geschickt?",
     answers: {
       a: "Albus Dumbledor",
       b: "Sirius Black",
@@ -40,59 +40,59 @@ let hogwartsQA = [
     correctAnswer: "Sirius Black",
   },
   {
-    question: "What kind of pet does Harry own?",
-    answers: { a: "Owl", b: "Cat", c: "Frog", d: "Rat" },
-    correctAnswer: "Owl",
+    question: "Welches Haustier besitzt Harry?",
+    answers: { a: "Eule", b: "Katze", c: "Frosch", d: "Ratte" },
+    correctAnswer: "Eule",
   },
   {
-    question: "What is the name of Harry's aunt?",
+    question: "Wie heißt Harrys Tante?",
     answers: { a: "Petunia", b: "Beatrice", c: "Minerva", d: "Lavender" },
     correctAnswer: "Petunia",
   },
   {
     question:
-      "What painting guards the entrance to the Gryffindor common room?",
+      "Welches Gemälde bewacht den Eingang zum Gemeinschaftsraum von Gryffindor?",
     answers: {
-      a: "The strong hunter",
-      b: "The Fat Lady",
-      c: "The smart girl",
-      d: "The dangerous ghost",
+      a: "Der starke Jäger",
+      b: "Die dicke Dame",
+      c: "Das schlaue Mädchen",
+      d: "Der gefährliche Geist",
     },
-    correctAnswer: "The Fat Lady",
+    correctAnswer: "Die dicke Dame",
   },
   {
-    question: "Where in Kings Cross Station does the Hogwarts Express stop?",
+    question: "Wo hält der Hogwarts Express im Bahnhof King's Cross?",
     answers: {
-      a: "Platform 4 and ¾",
-      b: "Platform 8 and ¾",
-      c: "Platform 9 and ¾",
-      d: "Platform 7 and ¾",
+      a: "Gleis 4 und ¾",
+      b: "Gleis 8 und ¾",
+      c: "Gleis 9 und ¾",
+      d: "Gleis 7 und ¾",
     },
-    correctAnswer: "Platform 9 and ¾",
+    correctAnswer: "Gleis 9 und ¾",
   },
   {
-    question: "What type of creature is Fluffy?",
+    question: "Was für eine Kreatur ist Fluffy?",
     answers: {
-      a: "A three-eyed dog",
-      b: "A three-headed dog",
-      c: "A three-armed dog",
-      d: "A three-leged dog",
+      a: "Ein dreiaugiger Hund",
+      b: "Ein dreiköpfiger Hund",
+      c: "Ein dreibewaffneter Hund",
+      d: "Ein dreibeiniger Hund",
     },
-    correctAnswer: "A three-headed dog",
+    correctAnswer: "Ein dreiköpfiger Hund",
   },
   {
-    question: "Which spell can levitate an object?",
+    question: "Welcher Zauber kann einen Gegenstand schweben lassen?",
     answers: {
       a: "Expecto Patronum",
       b: "Wingardium Leviosa",
-      c: "Expelliarmus",
+      c: "Expelliarm",
       d: "Alohomora",
     },
     correctAnswer: "Wingardium Leviosa",
   },
   {
     question:
-      "Who anonymously sends Harry his father's Invisibility Cloak on Christmas?",
+      "Wer sendet Harry anonym den Tarnumhang seines Vaters an Weihnachten?",
     answers: {
       a: "Minerva McGonagall",
       b: "Sirius Black",
@@ -102,27 +102,27 @@ let hogwartsQA = [
     correctAnswer: "Albus Dumbledore",
   },
   {
-    question: "What is the name of the Weasley family home?",
+    question: "Wie heißt das Haus der Weasley-Familie?",
     answers: {
-      a: "The Shanty",
-      b: "The Hut",
-      c: "The Cabin",
-      d: "The Burrow",
+      a: "Die Baracke",
+      b: "Die Hütte",
+      c: "Die Kabine",
+      d: "Der Fuchsbau",
     },
-    correctAnswer: "The Burrow",
+    correctAnswer: "Der Fuchsbau",
   },
   {
-    question: "What is Dean Thomas's favorite sport?",
+    question: "Welchen Sport bevorzugt Dean Thomas?",
     answers: {
-      a: "Soccer",
+      a: "Fußball",
       b: "Quidditch",
       c: "Basketball",
-      d: "Swimming",
+      d: "Schwimmen",
     },
-    correctAnswer: "Soccer",
+    correctAnswer: "Fußball",
   },
   {
-    question: "What kind of magical creature is Aragog?",
+    question: "Was für eine magische Kreatur ist Aragog?",
     answers: {
       a: "Acromantula",
       b: "Aramula",
@@ -132,17 +132,17 @@ let hogwartsQA = [
     correctAnswer: "Acromantula",
   },
   {
-    question: "Where is the entrance to the Chamber of Secrets hidden?",
+    question: "Wo ist der Eingang zur Kammer des Schreckens versteckt?",
     answers: {
-      a: "The boys' bathroom",
-      b: "The invisible room",
-      c: "The girls' bathroom",
-      d: "The great hall",
+      a: "In der Jungen-Toilette",
+      b: "Im unsichtbaren Raum",
+      c: "In der Mädchen-Toilette",
+      d: "In der großen Halle",
     },
-    correctAnswer: "The girls' bathroom",
+    correctAnswer: "In der Mädchen-Toilette",
   },
   {
-    question: "How many players are on a Quidditch team?",
+    question: "Wie viele Spieler sind auf einem Quidditch-Team?",
     answers: {
       a: "7",
       b: "6",
@@ -152,17 +152,17 @@ let hogwartsQA = [
     correctAnswer: "7",
   },
   {
-    question: "What kind of wood is Harry's first wand made out of?",
+    question: "Aus welchem Holz ist Harrys erster Zauberstab?",
     answers: {
-      a: "Phoenix feather",
-      b: "Holly",
-      c: "Dragon heartstrings",
-      d: "Unicorn hair",
+      a: "Phönixfeder",
+      b: "Stechpalme",
+      c: "Drachenherzfaser",
+      d: "Einhornhaar",
     },
-    correctAnswer: "Holly",
+    correctAnswer: "Stechpalme",
   },
   {
-    question: "What is the name of Harry's father?",
+    question: "Wie heißt Harrys Vater?",
     answers: {
       a: "Gordon",
       b: "James",
@@ -172,20 +172,20 @@ let hogwartsQA = [
     correctAnswer: "James",
   },
   {
-    question: "What animal can Harry speak to?",
+    question: "Mit welchem Tier kann Harry sprechen?",
     answers: {
-      a: "Spider",
-      b: "Dragon",
-      c: "Snake",
-      d: "Owl",
+      a: "Spinne",
+      b: "Drache",
+      c: "Schlange",
+      d: "Eule",
     },
-    correctAnswer: "Snake",
+    correctAnswer: "Schlange",
   },
 ];
 
 let hogwartsQAExtra = [
   {
-    question: "Who is the headmaster of Hogwarts in the first book?",
+    question: "Wer ist der Schulleiter von Hogwarts im ersten Buch?",
     answers: {
       a: "Albus Dumbledore",
       b: "Severus Snape",
@@ -195,7 +195,7 @@ let hogwartsQAExtra = [
     correctAnswer: "Albus Dumbledore",
   },
   {
-    question: "What is the name of Hagrid's pet dragon?",
+    question: "Wie heißt Hagrids Haustier-Drache?",
     answers: {
       a: "Norbert",
       b: "Fluffy",
@@ -205,17 +205,18 @@ let hogwartsQAExtra = [
     correctAnswer: "Norbert",
   },
   {
-    question: "What is the name of the ghost who haunts the girls' bathroom?",
+    question:
+      "Wie lautet der Name des Geistes, der das Mädchenbadezimmer heimsucht?",
     answers: {
-      a: "Nearly Headless Nick",
-      b: "The Bloody Baron",
-      c: "Moaning Myrtle",
-      d: "The Fat Friar",
+      a: "Fast Kopfloser Nick",
+      b: "Der Blutige Baron",
+      c: "Jammernde Myrte",
+      d: "Der Dicke Mönch",
     },
-    correctAnswer: "Moaning Myrtle",
+    correctAnswer: "Jammernde Myrte",
   },
   {
-    question: "What is the name of the game played on flying broomsticks?",
+    question: "Wie heißt das Spiel, das auf fliegenden Besen gespielt wird?",
     answers: {
       a: "Gobstones",
       b: "Quidditch",
@@ -226,17 +227,17 @@ let hogwartsQAExtra = [
   },
   {
     question:
-      "What is the name of the tree that Harry and Ron crash into in the flying car?",
+      "Wie heißt der Baum, in den Harry und Ron mit dem fliegenden Auto krachen?",
     answers: {
-      a: "Whomping Willow",
-      b: "Giant Sequoia",
+      a: "Peitschende Weide",
+      b: "Riesenmammutbaum",
       c: "Fanged Fir",
-      d: "Cursed Chestnut",
+      d: "Verfluchte Rosskastanie",
     },
-    correctAnswer: "Whomping Willow",
+    correctAnswer: "Peitschende Weide",
   },
   {
-    question: "What is the name of the potion that makes the drinker lucky?",
+    question: "Wie heißt der Trank, der den Trinker glücklich macht?",
     answers: {
       a: "Polyjuice Potion",
       b: "Veritaserum",
@@ -246,7 +247,7 @@ let hogwartsQAExtra = [
     correctAnswer: "Felix Felicis",
   },
   {
-    question: "What is the name of the spell that unlocks doors?",
+    question: "Wie heißt der Zauber, der Türen öffnet?",
     answers: {
       a: "Wingardium Leviosa",
       b: "Alohomora",
@@ -256,7 +257,7 @@ let hogwartsQAExtra = [
     correctAnswer: "Alohomora",
   },
   {
-    question: "What is the name of Ron's pet rat?",
+    question: "Wie heißt Rons Haustier?",
     answers: {
       a: "Crookshanks",
       b: "Fang",
@@ -266,8 +267,7 @@ let hogwartsQAExtra = [
     correctAnswer: "Scabbers",
   },
   {
-    question:
-      "What is the name of the monster that lives in the Chamber of Secrets?",
+    question: "Wie heißt das Monster, das in der Kammer des Schreckens lebt?",
     answers: {
       a: "Basilisk",
       b: "Acromantula",
@@ -277,7 +277,7 @@ let hogwartsQAExtra = [
     correctAnswer: "Basilisk",
   },
   {
-    question: "Who is the headmaster of Hogwarts in the first book?",
+    question: "Wer ist der Schulleiter von Hogwarts im ersten Buch?",
     answers: {
       a: "Albus Dumbledore",
       b: "Severus Snape",
@@ -287,7 +287,7 @@ let hogwartsQAExtra = [
     correctAnswer: "Albus Dumbledore",
   },
   {
-    question: "What is the name of Hagrid's pet dragon?",
+    question: "Wie heißt Hagrids Haustierdrache?",
     answers: {
       a: "Norbert",
       b: "Fluffy",
@@ -297,7 +297,7 @@ let hogwartsQAExtra = [
     correctAnswer: "Norbert",
   },
   {
-    question: "Who is the Half-Blood Prince?",
+    question: "Wer ist der Halbblutprinz?",
     answers: {
       a: "Albus Dumbledore",
       b: "Tom Riddle",
@@ -307,7 +307,7 @@ let hogwartsQAExtra = [
     correctAnswer: "Severus Snape",
   },
   {
-    question: "What is the name of the Hogwarts Express?",
+    question: "Wie heißt der Hogwarts Express?",
     answers: {
       a: "The Knight Bus",
       b: "The Hogwarts Express",
@@ -316,18 +316,19 @@ let hogwartsQAExtra = [
     },
     correctAnswer: "The Hogwarts Express",
   },
+
   {
-    question: "What creature guards the entrance to the Chamber of Secrets?",
+    question: "Welches Wesen bewacht den Eingang zur Kammer des Schreckens?",
     answers: {
       a: "Basilisk",
       b: "Acromantula",
-      c: "Giant",
-      d: "Dragon",
+      c: "Riese",
+      d: "Drache",
     },
     correctAnswer: "Basilisk",
   },
   {
-    question: "Who is the potions master in the first book?",
+    question: "Wer ist der Zaubertrankmeister im ersten Buch?",
     answers: {
       a: "Albus Dumbledore",
       b: "Severus Snape",
@@ -337,17 +338,17 @@ let hogwartsQAExtra = [
     correctAnswer: "Severus Snape",
   },
   {
-    question: "What is the name of Hermione's cat?",
+    question: "Wie heißt Hermine's Katze?",
     answers: {
-      a: "Crookshanks",
+      a: "Krätze",
       b: "Fang",
       c: "Mrs. Norris",
-      d: "Scabbers",
+      d: "Krummbein",
     },
-    correctAnswer: "Crookshanks",
+    correctAnswer: "Krätze",
   },
   {
-    question: "What is the name of Harry Potter's owl?",
+    question: "Wie heißt die Eule von Harry Potter?",
     answers: {
       a: "Hedwig",
       b: "Errol",
@@ -357,7 +358,7 @@ let hogwartsQAExtra = [
     correctAnswer: "Hedwig",
   },
   {
-    question: "Who kills Dumbledore in the sixth book?",
+    question: "Wer tötet Dumbledore im sechsten Buch?",
     answers: {
       a: "Bellatrix Lestrange",
       b: "Severus Snape",
@@ -367,7 +368,8 @@ let hogwartsQAExtra = [
     correctAnswer: "Severus Snape",
   },
   {
-    question: "Who is the author of 'Fantastic Beasts and Where to Find Them'?",
+    question:
+      "Wer ist der Autor von 'Phantastische Tierwesen und wo sie zu finden sind'?",
     answers: {
       a: "Newt Scamander",
       b: "Hermione Granger",
@@ -378,7 +380,7 @@ let hogwartsQAExtra = [
   },
   {
     question:
-      "What is the name of the evil wizard who terrorized the wizarding world before Harry Potter?",
+      "Wie heißt der böse Zauberer, der vor Harry Potter die Zauberwelt terrorisierte?",
     answers: {
       a: "Gellert Grindelwald",
       b: "Voldemort",
@@ -388,7 +390,7 @@ let hogwartsQAExtra = [
     correctAnswer: "Gellert Grindelwald",
   },
   {
-    question: "What is the name of the wizarding school in the United States?",
+    question: "Wie heißt die Zaubererschule in den Vereinigten Staaten?",
     answers: {
       a: "Hogwarts",
       b: "Ilvermorny",
@@ -399,7 +401,7 @@ let hogwartsQAExtra = [
   },
   {
     question:
-      "What is the name of the powerful Obscurial who wreaks havoc in 'Fantastic Beasts and Where to Find Them'?",
+      "Wie heißt der mächtige Obscurial, der in 'Phantastische Tierwesen und wo sie zu finden sind' Chaos anrichtet?",
     answers: {
       a: "Credence Barebone",
       b: "Grindelwald",
@@ -409,15 +411,14 @@ let hogwartsQAExtra = [
     correctAnswer: "Credence Barebone",
   },
   {
-    question:
-      "What is the name of the wizarding newspaper in the Harry Potter series?",
+    question: "Wie heißt die Zaubererzeitung in der Harry-Potter-Serie?",
     answers: {
-      a: "The Daily Prophet",
-      b: "The Quibbler",
-      c: "The Daily Mail",
-      d: "The New York Times",
+      a: "Der Tagesprophet",
+      b: "Der Klitterer",
+      c: "Die Daily Mail",
+      d: "Die New York Times",
     },
-    correctAnswer: "The Daily Prophet",
+    correctAnswer: "Der Tagesprophet",
   },
   {
     question: "What is the name of the house elf who serves the Black family?",
