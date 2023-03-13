@@ -152,7 +152,6 @@ canvas {
   position: fixed;
   left: 0;
   bottom: 70px;
-  z-index: 4;
 }
 .activity-field {
   border: #0e4124;
@@ -170,7 +169,6 @@ canvas {
   position: fixed;
   bottom: 20px;
   right: 0;
-  z-index: 4;
 }
 
 .bubble-wrapper {
@@ -307,7 +305,8 @@ canvas {
   width: 100%;
   padding: 5px;
   background-color: black;
-  z-index: 98;
+  z-index: 99;
+  display: none;
 }
 .banner {
   text-align: center;
@@ -344,5 +343,29 @@ canvas {
   text-transform: uppercase;
   background-color: red;
   z-index: 2;
+  display: none;
+}
+
+.question-extra {
+  display: none;
+  align-content: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+#more-QA-btn {
+  font-size: 18pt;
+  color: rgb(255, 0, 0);
+  width: 300px;
+  height: 60px;
+  cursor: pointer;
+  border-color: #014314;
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+  z-index: 3;
+  display: none;
+}
+
+#endgame {
   display: none;
 }

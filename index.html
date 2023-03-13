@@ -76,6 +76,9 @@
               <div id="box3" class="box"></div>
             </div>
             <div id="startreset">Start Game</div>
+            <div class="question-extra">
+              <button id="more-QA-btn">Fight against the monster</button>
+            </div>
           </div>
         </div>
 
@@ -86,30 +89,62 @@
           <img src="images/ron.PNG" alt="Ron Weasley" />
         </div>
       </div>
-
-      <footer class="footer">
-        <button id="disclaimer-open-btn">open disclaimer</button>
-        <button id="disclaimer-close-btn">close disclaimer</button>
-        <div class="disclaimer">
-          Hermione image taken from:
-          https://wiki.coldmirror.net/wiki/Datei:Hermione01.jpg<br />
-          Ron image taken from:
-          https://imgbin.com/png/98BSUZg9/hermione-granger-ron-weasley-harry-potter-rupert-grint-snatch-png<br />
-          Logo image taken from: https://wallpapers.com/harry-potter-houses;
-          Keys image taken from: https://www.gettyimages.es/fotos/old-key;
-          <br />
-          Old Paper image taken from:
-          https://www.freepik.com/premium-photo/old-paper-manuscript-papyrus-scroll-vertically-oriented-isolated-white-background_6025595.htm;<br />
-          Source of music: https://www.youtube.com/watch?v=slxPFAJN9UM<br />
-          Chamber of secrets image taken from:
-          https://harrypotter.fandom.com/wiki/Chamber_of_Secrets?file=Chamber.png
-          and https://i.redd.it/h67tgnzfcqca1.jpg,
-        </div>
-        <div class="banner">
-          <img src="images/banner.jpg" alt="Hogwarts Logo" />
-        </div>
-      </footer>
     </div>
+
+    <div id="endgame">
+      <header></header>
+      <div class="heading">
+        <h2>Chamber of Secrets</h2>
+        <h4>Help us fight against the monster!</h4>
+      </div>
+
+      <div id="timeremaining">
+        Time remaining:
+        <span id="timeremainingvalue">30</span>
+      </div>
+
+      <div class="end-board">
+        <div class="score-endgame">
+          <div id="score">score: <span id="scorevalue">0</span></div>
+          <div id="question-endgame">
+            <div id="question-text-endgame"></div>
+            <div id="game-over">Game Over!</div>
+          </div>
+
+          <div id="choices-endgame">
+            <div id="box0-endgame" class="box-endgame"></div>
+            <div id="box1-endgame" class="box-endgame"></div>
+            <div id="box2-endgame" class="box-endgame"></div>
+            <div id="box3-endgame" class="box-endgame"></div>
+          </div>
+          <div id="startreset-endgame">Start Game</div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <button id="disclaimer-open-btn">open disclaimer</button>
+      <button id="disclaimer-close-btn">close disclaimer</button>
+      <div class="disclaimer">
+        Hermione image taken from:
+        https://wiki.coldmirror.net/wiki/Datei:Hermione01.jpg<br />
+        Ron image taken from:
+        https://imgbin.com/png/98BSUZg9/hermione-granger-ron-weasley-harry-potter-rupert-grint-snatch-png<br />
+        Logo image taken from: https://wallpapers.com/harry-potter-houses; Keys
+        image taken from: https://www.gettyimages.es/fotos/old-key;
+        <br />
+        Old Paper image taken from:
+        https://www.freepik.com/premium-photo/old-paper-manuscript-papyrus-scroll-vertically-oriented-isolated-white-background_6025595.htm;<br />
+        Source of music: https://www.youtube.com/watch?v=slxPFAJN9UM<br />
+        Chamber of secrets image taken from:
+        https://harrypotter.fandom.com/wiki/Chamber_of_Secrets?file=Chamber.png
+        and https://i.redd.it/h67tgnzfcqca1.jpg,
+      </div>
+      <div class="banner">
+        <img src="images/banner.jpg" alt="Hogwarts Logo" />
+      </div>
+    </footer>
+
     <audio id="mySong" src="music/harry_potter.mp3"></audio>
     <div id="canvas-board">
       <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script>

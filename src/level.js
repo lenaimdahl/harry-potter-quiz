@@ -16,6 +16,16 @@ document.querySelector("#enter-btn").onclick = function () {
   document.querySelector("canvas").style.display = "inherit";
   document.querySelector("#game-content").style.display = "flex";
   document.body.style.backgroundImage = `url("./images/hall.jpg")`;
+  document.querySelector("footer").style.display = "inherit";
+};
+
+// fight Endgame
+document.querySelector("#more-QA-btn").onclick = function () {
+  document.querySelector(".heading").style.display = "none";
+  document.querySelector("#more-QA-btn").style.display = "none";
+  document.querySelector(".activity-field").style.display = "inherit";
+  document.querySelector("#startreset").style.display = "none";
+  document.querySelector("#startreset-extra").style.display = "inherit";
 };
 
 //disclaimer open
@@ -127,7 +137,9 @@ function finishGame() {
   let textEndingGame = document.querySelector(".heading");
   textEndingGame.innerHTML = "You entered the Chamber of Secrets";
   textEndingGame.style.fontSize = "40pt";
-  textEndingGame.style.marginTop = "500px";
+  textEndingGame.style.marginTop = "100px";
+  document.querySelector(".question-extra").style.display = "flex";
+  document.querySelector("#more-QA-btn").style.display = "inherit";
 
   stopCountdown();
 
@@ -220,7 +232,7 @@ function showQuestion(text) {
 }
 
 //Math Fumctions
-//divide
+
 function generatePlusMinus() {
   setChoicesStyle();
   setQuestionStyle();
