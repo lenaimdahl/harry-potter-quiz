@@ -347,6 +347,23 @@ canvas {
   z-index: 4;
 }
 
+#end-game {
+  display: "none";
+}
+
+#startreset-Extra {
+  width: 200px;
+  padding: 10px;
+  font-size: 20pt;
+  background-color: rgba(38, 151, 65, 0.5);
+  margin: 50px auto;
+  border-radius: 3px;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  text-shadow: 2px 2px black;
+}
+
 .disclaimer {
   display: none;
 }

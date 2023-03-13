@@ -1,4 +1,4 @@
-//enter first page
+//enter intro of game
 
 document.querySelector("#reveal-btn").onclick = function () {
   document.querySelector("#dark").style.display = "block";
@@ -10,7 +10,7 @@ document.querySelector("#reveal-btn").onclick = function () {
   song.play();
 };
 
-//enter game
+//enter the game
 
 document.querySelector("#enter-btn").onclick = function () {
   document.querySelector("#enter-btn").style.display = "none";
@@ -20,12 +20,15 @@ document.querySelector("#enter-btn").onclick = function () {
   document.body.style.backgroundImage = `url("./images/hall.jpg")`;
 };
 
-// fight against monster
+// fight Endgame
 document.querySelector("#more-QA-btn").onclick = function () {
   document.querySelector(".heading").style.display = "none";
   document.querySelector("#more-QA-btn").style.display = "none";
   document.querySelector(".activity-field").style.display = "inherit";
+  document.querySelector("#startreset").style.display = "none";
+  document.querySelector("#startreset-Extra").style.display = "inherit";
 };
+
 //disclaimer open
 document.querySelector("#disclaimer-open-btn").onclick = function () {
   document.querySelector(".disclaimer").style.display = "inherit";
@@ -457,3 +460,46 @@ function draw() {
   key9.x = key9.x + random(-speedX, speedX) * 3;
   key9.y = key9.y + random(-speedY, speedY) * 1;
 }
+
+//Endgame start questions
+function endGame() {
+  if (playing == true) {
+    location.reload();
+  } else {
+    playing = true;
+    score = 0;
+
+    document.getElementById("scorevalue").innerHTML = score;
+    document.getElementById("startreset").innerHTML = "Reset Game";
+
+    generateHPQuizExtra();
+    startCountdown();
+  }
+}
+function loopAnswer() {
+  for (i = 0; i < 4; i++) {
+    document.getElementById("box" + i).onclick = checkAnswerEndGame;
+  }
+}
+//HP question extra
+function generateHPQuizExtra() {
+  setChoicesStyle("17pt");
+  setQuestionStyle("25pt");
+  showQuestion(hogwartsQAExtra[HPQuizIndex].question);
+  showChoices(
+    hogwartsQAExtra[HPQuizIndex].answers.a,
+    hogwartsQAExtra[HPQuizIndex].answers.b,
+    hogwartsQAExtra[HPQuizIndex].answers.c,
+    hogwartsQAExtra[HPQuizIndex].answers.d
+  );
+  finalAnswer = hogwartsQAExtra[HPQuizIndex].correctAnswer;
+  HPQuizIndex++;
+}
+
+// fight against monster
+document.querySelector("#more-QA-btn").onclick = function () {
+  document.querySelector(".heading").style.display = "none";
+  document.querySelector("#more-QA-btn").style.display = "none";
+  document.querySelector(".activity-field").style.display = "inherit";
+  document.querySelector("#level").innerHTML = "End Game";
+};
