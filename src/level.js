@@ -19,15 +19,6 @@ document.querySelector("#enter-btn").onclick = function () {
   document.querySelector("footer").style.display = "inherit";
 };
 
-// fight Endgame
-document.querySelector("#more-QA-btn").onclick = function () {
-  document.querySelector(".heading").style.display = "none";
-  document.querySelector("#more-QA-btn").style.display = "none";
-  document.querySelector("#endgame").style.display = "inherit";
-  document.querySelector(".figure-1").style.display = "none";
-  document.querySelector(".figure-2").style.display = "none";
-};
-
 //disclaimer open
 document.querySelector("#disclaimer-open-btn").onclick = function () {
   document.querySelector(".disclaimer").style.display = "inherit";
