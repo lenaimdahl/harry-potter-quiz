@@ -309,7 +309,15 @@ canvas {
   background-color: black;
   z-index: 98;
 }
-
+.banner {
+  text-align: center;
+}
+.banner img {
+  height: 60px;
+}
+.disclaimer {
+  display: none;
+}
 #disclaimer-open-btn,
 #disclaimer-close-btn {
   font-size: 15pt;
@@ -327,51 +335,6 @@ canvas {
 }
 #disclaimer-close-btn {
   display: none;
-}
-
-.question-extra {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-}
-
-#more-QA-btn {
-  font-size: 18pt;
-  color: rgb(255, 0, 0);
-  width: 300px;
-  height: 60px;
-  cursor: pointer;
-  border-color: #014314;
-  background-color: rgb(0, 0, 0);
-  text-align: center;
-  z-index: 4;
-}
-
-#end-game {
-  display: "none";
-}
-
-#startreset-Extra {
-  width: 200px;
-  padding: 10px;
-  font-size: 20pt;
-  background-color: rgba(38, 151, 65, 0.5);
-  margin: 50px auto;
-  border-radius: 3px;
-  cursor: pointer;
-  text-align: center;
-  position: relative;
-  text-shadow: 2px 2px black;
-}
-
-.disclaimer {
-  display: none;
-}
-.banner {
-  text-align: center;
-}
-.banner img {
-  height: 60px;
 }
 
 #game-over {
