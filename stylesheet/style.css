@@ -374,15 +374,15 @@ canvas {
 }
 
 .heading-endgame {
-  top: 50px;
-  margin-left: 600px;
+  top: 10px;
+  margin-left: 50px;
   text-align: center;
   color: #ff0000;
   text-shadow: 2px 2px rgb(0, 58, 1);
   margin-bottom: 80px;
   text-align: center;
   font-family: cursive, sans-serif;
-  font-size: 25pt;
+  font-size: 20pt;
   position: fixed;
 }
 
@@ -394,7 +394,7 @@ canvas {
   color: #fff;
   margin: 0 100px 100px 400px;
   font-family: "Chalk", cursive;
-  width: 600px;
+  width: 650px;
   position: fixed;
   bottom: 40px;
 }
@@ -412,6 +412,7 @@ canvas {
   align-items: center;
   height: 100%;
 }
+
 #choices-endgame {
   display: flex;
   flex-direction: row;

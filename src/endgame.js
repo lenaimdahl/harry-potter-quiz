@@ -1,3 +1,6 @@
+let answeredHPExtraQuestions = [];
+let currentHPExtraQuestion;
+
 // fight Endgame
 document.querySelector("#more-QA-btn").onclick = function () {
   document.querySelector(".heading").style.display = "none";
@@ -8,80 +11,39 @@ document.querySelector("#more-QA-btn").onclick = function () {
 };
 
 //start the game
-function startGameEndgame() {
+function startEndgame() {
   if (playing == true) {
     location.reload();
   } else {
     playing = true;
     score = 0;
 
-    document.getElementById("scorevalue").innerHTML = score;
-    document.getElementById("startreset").innerHTML = "Reset Game";
+    document.getElementById("startreset-endgame").innerHTML = "Reset Game";
 
     generateHPQuizEndgame();
-    startCountdown();
   }
 }
-document.getElementById("startreset").onclick = startGame;
-
-function startCountdown() {
-  timeremaining = 30;
-  document.querySelector("#timeremaining").style.display = "inherit";
-  document.getElementById("timeremainingvalue").innerHTML = timeremaining;
-
-  timer = setInterval(() => {
-    timeremaining -= 1;
-
-    document.getElementById("timeremainingvalue").innerHTML = timeremaining;
-
-    if (timeremaining === 0) {
-      stopCountdown();
-      document.querySelector("#question-text-endgame").style.display = "none";
-      document.querySelector("#game-over").style.display = "inherit";
-    }
-    if (chance === 0) {
-      stopCountdown();
-      document.querySelector("#question-text-endgame").style.display = "none";
-      document.querySelector("#game-over").style.display = "inherit";
-    }
-  }, 1000);
-}
-
-function stopCountdown() {
-  clearInterval(timer);
-}
-
-function resetCountdown() {
-  stopCountdown();
-  startCountdown();
-}
+document.getElementById("startreset-endgame").onclick = startEndgame;
 
 function finishEndgame() {
-  let textEndgame = document.querySelector(".heading");
+  let textEndgame = document.querySelector(".heading-endgame");
   textEndgame.innerHTML = "We killed the monster!";
-  textEndgame.style.fontSize = "40pt";
-  textEndgame.style.marginTop = "500px";
-
-  stopCountdown();
+  textEndgame.style.fontSize = "50pt";
+  textEndgame.style.marginTop = "500pxpx";
+  textEndgame.style.marginLeft = "400px";
+  document.querySelector(".end-board").style.display = "none";
 }
 
 function checkAnswerEndgame() {
   if (playing == true) {
     if (this.innerHTML == finalAnswer) {
       score++;
-      document.getElementById("scorevalue").innerHTML = score;
-
-      if (score >= 0 && score < 5) {
-        generateHPQuizEndgame();
-      }
+      answeredHPExtraQuestions.push(currentHPExtraQuestion);
       if (score === 5) {
         finishEndgame();
       } else {
-        resetCountdown();
+        generateHPQuizEndgame();
       }
-    } else {
-      chance--;
-      document.querySelector("#chancevalue").innerHTML = chance;
     }
   }
 }
@@ -102,16 +64,16 @@ function showChoicesEndgame(correctAnswer, choice2, choice3, choice4) {
     boxes.push(boxId);
   }
 
-  let box0 = document.querySelector(`#box${boxes[0]}`);
+  let box0 = document.querySelector(`#box-endgame${boxes[0]}`);
   box0.innerHTML = correctAnswer;
 
-  let box1 = document.querySelector(`#box${boxes[1]}`);
+  let box1 = document.querySelector(`#box-endgame${boxes[1]}`);
   box1.innerHTML = choice2;
 
-  let box2 = document.querySelector(`#box${boxes[2]}`);
+  let box2 = document.querySelector(`#box-endgame${boxes[2]}`);
   box2.innerHTML = choice3;
 
-  let box3 = document.querySelector(`#box${boxes[3]}`);
+  let box3 = document.querySelector(`#box-endgame${boxes[3]}`);
   box3.innerHTML = choice4;
 }
 
@@ -120,17 +82,33 @@ function showQuestionEndgame(text) {
   questionElement.innerHTML = text;
 }
 
+function setQuestionStyleEndgame(size = "40pt") {
+  document.querySelector("#question-text-endgame").style.fontSize = size;
+}
+function setChoicesStyleEndgame(size = "30pt") {
+  for (let i = 0; i < 4; i++) {
+    document.querySelector(`#box-endgame${i}`).style.fontSize = size;
+  }
+}
+
 //HP question extra
+
 function generateHPQuizEndgame() {
-  setChoicesStyle("17pt");
-  setQuestionStyle("25pt");
-  showQuestionEndgame(hogwartsQAExtra[HPQuizIndex].question);
+  setChoicesStyleEndgame("17pt");
+  setQuestionStyleEndgame("25pt");
+
+  let index;
+  do {
+    index = Math.round(hogwartsQAExtra.length * Math.random());
+  } while (answeredHPExtraQuestions.includes(index));
+
+  showQuestionEndgame(hogwartsQAExtra[index].question);
   showChoicesEndgame(
-    hogwartsQAExtra[HPQuizIndex].answers.a,
-    hogwartsQAExtra[HPQuizIndex].answers.b,
-    hogwartsQAExtra[HPQuizIndex].answers.c,
-    hogwartsQAExtra[HPQuizIndex].answers.d
+    hogwartsQAExtra[index].answers.a,
+    hogwartsQAExtra[index].answers.b,
+    hogwartsQAExtra[index].answers.c,
+    hogwartsQAExtra[index].answers.d
   );
-  finalAnswer = hogwartsQAExtra[HPQuizIndex].correctAnswer;
-  HPQuizIndex++;
+  finalAnswer = hogwartsQAExtra[index].correctAnswer;
+  currentHPExtraQuestion = index;
 }
