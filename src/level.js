@@ -19,6 +19,13 @@ document.querySelector("#enter-btn").onclick = function () {
   document.querySelector("#game-content").style.display = "flex";
   document.body.style.backgroundImage = `url("./images/hall.jpg")`;
 };
+
+// fight against monster
+document.querySelector("#more-QA-btn").onclick = function () {
+  document.querySelector(".heading").style.display = "none";
+  document.querySelector("#more-QA-btn").style.display = "none";
+  document.querySelector(".activity-field").style.display = "inherit";
+};
 //disclaimer open
 document.querySelector("#disclaimer-open-btn").onclick = function () {
   document.querySelector(".disclaimer").style.display = "inherit";

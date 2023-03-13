@@ -329,6 +329,24 @@ canvas {
   display: none;
 }
 
+.question-extra {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+#more-QA-btn {
+  font-size: 18pt;
+  color: rgb(255, 0, 0);
+  width: 300px;
+  height: 60px;
+  cursor: pointer;
+  border-color: #014314;
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+  z-index: 4;
+}
+
 .disclaimer {
   display: none;
 }
