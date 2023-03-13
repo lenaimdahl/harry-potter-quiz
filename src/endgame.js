@@ -24,30 +24,6 @@ function startGameEndgame() {
 }
 document.getElementById("startreset").onclick = startGame;
 
-// level
-
-function createLevelEndgame() {
-  const oldLevel = level;
-  if (score === 5) {
-    level = 2;
-  }
-  if (score === 10) {
-    level = 3;
-  }
-  if (score === 15) {
-    level = 4;
-  }
-  if (score === 20) {
-    level = 5;
-  }
-
-  document.querySelector("#levelvalue").innerHTML = level;
-  if (level > oldLevel) {
-    document.querySelector("#level-text").innerHTML =
-      "You reached a new Level!";
-  }
-}
-
 function startCountdown() {
   timeremaining = 30;
   document.querySelector("#timeremaining").style.display = "inherit";
@@ -93,15 +69,12 @@ function checkAnswerEndgame() {
   if (playing == true) {
     if (this.innerHTML == finalAnswer) {
       score++;
-      document.querySelector("#level-text").innerHTML = "";
       document.getElementById("scorevalue").innerHTML = score;
 
-      createLevel();
-
-      if (score >= 0 && score < 20) {
+      if (score >= 0 && score < 5) {
         generateHPQuizEndgame();
       }
-      if (score === 40) {
+      if (score === 5) {
         finishEndgame();
       } else {
         resetCountdown();

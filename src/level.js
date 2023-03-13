@@ -16,7 +16,6 @@ document.querySelector("#enter-btn").onclick = function () {
   document.querySelector("canvas").style.display = "inherit";
   document.querySelector("#game-content").style.display = "flex";
   document.body.style.backgroundImage = `url("./images/hall.jpg")`;
-  document.querySelector("footer").style.display = "inherit";
 };
 
 //disclaimer open

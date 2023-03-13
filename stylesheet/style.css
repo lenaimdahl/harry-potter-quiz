@@ -306,7 +306,6 @@ canvas {
   padding: 5px;
   background-color: black;
   z-index: 99;
-  display: none;
 }
 .banner {
   text-align: center;
