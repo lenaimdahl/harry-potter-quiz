@@ -365,6 +365,8 @@ canvas {
   align-items: center;
   z-index: 4;
   display: none;
+  position: fixed;
+  bottom: 200px;
 }
 
 #endgame {
@@ -392,7 +394,9 @@ canvas {
   color: #fff;
   margin: 0 100px 100px 400px;
   font-family: "Chalk", cursive;
-  max-width: 800px;
+  width: 600px;
+  position: fixed;
+  bottom: 40px;
 }
 
 #question-endgame {
