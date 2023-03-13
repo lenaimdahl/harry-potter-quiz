@@ -371,3 +371,16 @@ canvas {
 #endgame {
   display: none;
 }
+
+.heading-endgame {
+  top: 50px;
+  margin-left: 600px;
+  text-align: center;
+  color: #ff0000;
+  text-shadow: 2px 2px rgb(0, 58, 1);
+  margin-bottom: 80px;
+  text-align: center;
+  font-family: cursive, sans-serif;
+  font-size: 25pt;
+  position: fixed;
+}

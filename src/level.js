@@ -23,9 +23,9 @@ document.querySelector("#enter-btn").onclick = function () {
 document.querySelector("#more-QA-btn").onclick = function () {
   document.querySelector(".heading").style.display = "none";
   document.querySelector("#more-QA-btn").style.display = "none";
-  document.querySelector(".activity-field").style.display = "inherit";
-  document.querySelector("#startreset").style.display = "none";
-  document.querySelector("#startreset-extra").style.display = "inherit";
+  document.querySelector("#endgame").style.display = "inherit";
+  document.querySelector(".figure-1").style.display = "none";
+  document.querySelector(".figure-2").style.display = "none";
 };
 
 //disclaimer open
