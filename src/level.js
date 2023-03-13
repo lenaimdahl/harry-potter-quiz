@@ -38,136 +38,6 @@ document.querySelector("#disclaimer-close-btn").onclick = function () {
   document.querySelector("#disclaimer-close-btn").style.display = "none";
   document.querySelector("#disclaimer-open-btn").style.display = "inherit";
 };
-// obj p5.js
-
-let speedX = 2.5;
-let speedY = 2.6;
-
-let imgSnitch;
-let key1 = { x: 0, y: 0 };
-let key2 = { x: 0, y: 0 };
-let key3 = { x: 0, y: 0 };
-let key4 = { x: 0, y: 0 };
-let key5 = { x: 0, y: 0 };
-let key6 = { x: 0, y: 0 };
-let key7 = { x: 0, y: 0 };
-let key8 = { x: 0, y: 0 };
-let key9 = { x: 0, y: 0 };
-let snitch = { x: 0, y: 0 };
-
-function preload() {
-  imgSnitch = loadImage("images/snitch.png");
-  key1 = loadImage("images/key1.png");
-  key2 = loadImage("images/key2.png");
-  key3 = loadImage("images/key3.png");
-  key4 = loadImage("images/key1.png");
-  key5 = loadImage("images/key2.png");
-  key6 = loadImage("images/key3.png");
-  key7 = loadImage("images/key1.png");
-  key8 = loadImage("images/key2.png");
-  key9 = loadImage("images/key3.png");
-}
-function setup() {
-  let canvas = createCanvas(windowWidth, windowHeight);
-  canvas.position(0, 0, "fixed");
-
-  snitch.x = 350;
-  snitch.y = 200;
-
-  key1.x = 250;
-  key1.y = 100;
-
-  key2.x = 550;
-  key2.y = 200;
-
-  key3.x = 700;
-  key3.y = 60;
-
-  key4.x = 100;
-  key4.y = 90;
-
-  key5.x = 500;
-  key5.y = 150;
-
-  key6.x = 700;
-  key6.y = 100;
-
-  key7.x = 350;
-  key7.y = 300;
-
-  key8.x = 400;
-  key8.y = 210;
-
-  key9.x = 600;
-  key9.y = 40;
-}
-
-function draw() {
-  clear();
-  background("rgba(255,255,255, 0)");
-
-  snitch.x = constrain(snitch.x, 10, windowWidth - 10);
-  snitch.y = constrain(snitch.y, 10, windowWidth - 10);
-  key1.x = constrain(key1.x, 10, windowWidth - 10);
-  key1.y = constrain(key1.y, 10, windowWidth - 10);
-  key2.x = constrain(key2.x, 10, windowWidth - 10);
-  key2.y = constrain(key2.y, 10, windowWidth - 10);
-  key3.x = constrain(key3.x, 10, windowWidth - 10);
-  key3.y = constrain(key3.y, 10, windowWidth - 10);
-  key4.x = constrain(key4.x, 10, windowWidth - 10);
-  key4.y = constrain(key4.y, 10, windowWidth - 10);
-  key5.x = constrain(key5.x, 10, windowWidth - 10);
-  key5.y = constrain(key5.y, 10, windowWidth - 10);
-  key6.x = constrain(key6.x, 10, windowWidth - 10);
-  key6.y = constrain(key6.y, 10, windowWidth - 10);
-  key7.x = constrain(key7.x, 10, windowWidth - 10);
-  key7.y = constrain(key7.y, 10, windowWidth - 10);
-  key8.x = constrain(key8.x, 10, windowWidth - 10);
-  key8.y = constrain(key8.y, 10, windowWidth - 10);
-  key9.x = constrain(key9.x, 10, windowWidth - 10);
-  key9.y = constrain(key9.y, 10, windowWidth - 10);
-
-  image(imgSnitch, snitch.x, snitch.y, 50, 50);
-  image(key1, key1.x, key1.y, 40, 40);
-  image(key2, key2.x, key2.y, 40, 40);
-  image(key3, key3.x, key3.y, 40, 40);
-  image(key4, key4.x, key4.y, 40, 40);
-  image(key5, key5.x, key5.y, 40, 40);
-  image(key6, key6.x, key6.y, 40, 40);
-  image(key7, key7.x, key7.y, 40, 40);
-  image(key8, key8.x, key8.y, 40, 40);
-  image(key9, key9.x, key9.y, 40, 40);
-
-  snitch.x = snitch.x + random(-speedX, speedX);
-  snitch.y = snitch.y + random(-speedY, speedY);
-
-  key1.x = key1.x + random(-speedX, speedX) * 3;
-  key1.y = key1.y + random(-speedY, speedY) * 2;
-
-  key2.x = key2.x + random(-speedX, speedX) * 2;
-  key2.y = key2.y + random(-speedY, speedY) * 1;
-
-  key3.x = key3.x + random(-speedX, speedX) * 3;
-  key3.y = key3.y + random(-speedY, speedY) * 1;
-
-  key4.x = key4.x + random(-speedX, speedX) * 3;
-  key4.y = key4.y + random(-speedY, speedY) * 1;
-
-  key5.x = key5.x + random(-speedX, speedX) * 3;
-  key5.y = key5.y + random(-speedY, speedY) * 1;
-
-  key6.x = key6.x + random(-speedX, speedX) * 3;
-  key6.y = key6.y + random(-speedY, speedY) * 1;
-
-  key7.x = key7.x + random(-speedX, speedX) * 3;
-  key7.y = key7.y + random(-speedY, speedY) * 1;
-
-  key8.x = key8.x + random(-speedX, speedX) * 3;
-  key8.y = key8.y + random(-speedY, speedY) * 1;
-
-  key9.x = key9.x + random(-speedX, speedX) * 3;
-  key9.y = key9.y + random(-speedY, speedY) * 1;
-}
 
 // set up game questions
 let playing = false;
@@ -455,4 +325,135 @@ function generateHPQuiz() {
   );
   finalAnswer = hogwartsQA[HPQuizIndex].correctAnswer;
   HPQuizIndex++;
+}
+
+// obj p5.js
+
+let speedX = 2.5;
+let speedY = 2.6;
+
+let imgSnitch;
+let key1 = { x: 0, y: 0 };
+let key2 = { x: 0, y: 0 };
+let key3 = { x: 0, y: 0 };
+let key4 = { x: 0, y: 0 };
+let key5 = { x: 0, y: 0 };
+let key6 = { x: 0, y: 0 };
+let key7 = { x: 0, y: 0 };
+let key8 = { x: 0, y: 0 };
+let key9 = { x: 0, y: 0 };
+let snitch = { x: 0, y: 0 };
+
+function preload() {
+  imgSnitch = loadImage("images/snitch.png");
+  key1 = loadImage("images/key1.png");
+  key2 = loadImage("images/key2.png");
+  key3 = loadImage("images/key3.png");
+  key4 = loadImage("images/key1.png");
+  key5 = loadImage("images/key2.png");
+  key6 = loadImage("images/key3.png");
+  key7 = loadImage("images/key1.png");
+  key8 = loadImage("images/key2.png");
+  key9 = loadImage("images/key3.png");
+}
+function setup() {
+  let canvas = createCanvas(windowWidth, windowHeight);
+  canvas.position(0, 0, "fixed");
+
+  snitch.x = 350;
+  snitch.y = 200;
+
+  key1.x = 250;
+  key1.y = 100;
+
+  key2.x = 550;
+  key2.y = 200;
+
+  key3.x = 700;
+  key3.y = 60;
+
+  key4.x = 100;
+  key4.y = 90;
+
+  key5.x = 500;
+  key5.y = 150;
+
+  key6.x = 700;
+  key6.y = 100;
+
+  key7.x = 350;
+  key7.y = 300;
+
+  key8.x = 400;
+  key8.y = 210;
+
+  key9.x = 600;
+  key9.y = 40;
+}
+
+function draw() {
+  clear();
+  background("rgba(255,255,255, 0)");
+
+  snitch.x = constrain(snitch.x, 10, windowWidth - 10);
+  snitch.y = constrain(snitch.y, 10, windowWidth - 10);
+  key1.x = constrain(key1.x, 10, windowWidth - 10);
+  key1.y = constrain(key1.y, 10, windowWidth - 10);
+  key2.x = constrain(key2.x, 10, windowWidth - 10);
+  key2.y = constrain(key2.y, 10, windowWidth - 10);
+  key3.x = constrain(key3.x, 10, windowWidth - 10);
+  key3.y = constrain(key3.y, 10, windowWidth - 10);
+  key4.x = constrain(key4.x, 10, windowWidth - 10);
+  key4.y = constrain(key4.y, 10, windowWidth - 10);
+  key5.x = constrain(key5.x, 10, windowWidth - 10);
+  key5.y = constrain(key5.y, 10, windowWidth - 10);
+  key6.x = constrain(key6.x, 10, windowWidth - 10);
+  key6.y = constrain(key6.y, 10, windowWidth - 10);
+  key7.x = constrain(key7.x, 10, windowWidth - 10);
+  key7.y = constrain(key7.y, 10, windowWidth - 10);
+  key8.x = constrain(key8.x, 10, windowWidth - 10);
+  key8.y = constrain(key8.y, 10, windowWidth - 10);
+  key9.x = constrain(key9.x, 10, windowWidth - 10);
+  key9.y = constrain(key9.y, 10, windowWidth - 10);
+
+  image(imgSnitch, snitch.x, snitch.y, 50, 50);
+  image(key1, key1.x, key1.y, 40, 40);
+  image(key2, key2.x, key2.y, 40, 40);
+  image(key3, key3.x, key3.y, 40, 40);
+  image(key4, key4.x, key4.y, 40, 40);
+  image(key5, key5.x, key5.y, 40, 40);
+  image(key6, key6.x, key6.y, 40, 40);
+  image(key7, key7.x, key7.y, 40, 40);
+  image(key8, key8.x, key8.y, 40, 40);
+  image(key9, key9.x, key9.y, 40, 40);
+
+  snitch.x = snitch.x + random(-speedX, speedX);
+  snitch.y = snitch.y + random(-speedY, speedY);
+
+  key1.x = key1.x + random(-speedX, speedX) * 3;
+  key1.y = key1.y + random(-speedY, speedY) * 2;
+
+  key2.x = key2.x + random(-speedX, speedX) * 2;
+  key2.y = key2.y + random(-speedY, speedY) * 1;
+
+  key3.x = key3.x + random(-speedX, speedX) * 3;
+  key3.y = key3.y + random(-speedY, speedY) * 1;
+
+  key4.x = key4.x + random(-speedX, speedX) * 3;
+  key4.y = key4.y + random(-speedY, speedY) * 1;
+
+  key5.x = key5.x + random(-speedX, speedX) * 3;
+  key5.y = key5.y + random(-speedY, speedY) * 1;
+
+  key6.x = key6.x + random(-speedX, speedX) * 3;
+  key6.y = key6.y + random(-speedY, speedY) * 1;
+
+  key7.x = key7.x + random(-speedX, speedX) * 3;
+  key7.y = key7.y + random(-speedY, speedY) * 1;
+
+  key8.x = key8.x + random(-speedX, speedX) * 3;
+  key8.y = key8.y + random(-speedY, speedY) * 1;
+
+  key9.x = key9.x + random(-speedX, speedX) * 3;
+  key9.y = key9.y + random(-speedY, speedY) * 1;
 }
