@@ -350,7 +350,8 @@ canvas {
   display: none;
   align-content: center;
   justify-content: center;
-  z-index: 3;
+  z-index: 4;
+  margin-top: 400px;
 }
 
 #more-QA-btn {
@@ -361,8 +362,9 @@ canvas {
   cursor: pointer;
   border-color: #014314;
   background-color: rgb(0, 0, 0);
-  text-align: center;
-  z-index: 3;
+  justify-content: center;
+  align-items: center;
+  z-index: 4;
   display: none;
 }
 

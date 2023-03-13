@@ -139,12 +139,12 @@ function finishGame() {
   textEndingGame.style.fontSize = "40pt";
   textEndingGame.style.marginTop = "100px";
   document.querySelector(".question-extra").style.display = "flex";
-  document.querySelector("#more-QA-btn").style.display = "inherit";
+  document.querySelector("#more-QA-btn").style.display = "flex";
 
   stopCountdown();
 
   document.getElementById("hermione").innerHTML = "Congrats. You did it!";
-  document.getElementById("ron").innerHTML = "Thank you!";
+  document.getElementById("ron").innerHTML = "Good Luck!";
 }
 
 function checkAnswer() {
