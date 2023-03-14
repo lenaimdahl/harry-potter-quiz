@@ -120,7 +120,7 @@ function resetCountdown() {
 }
 
 function finishGame() {
-  document.body.style.backgroundImage = `url("../images/chamber_end.jpg")`;
+  document.body.style.backgroundImage = `url("./images/chamber_end.jpg")`;
   document.querySelector("canvas").style.display = "none";
   document.querySelector(".activity-field").style.display = "none";
 
