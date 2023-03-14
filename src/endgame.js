@@ -32,6 +32,8 @@ function finishEndgame() {
   textEndgame.style.marginTop = "500pxpx";
   textEndgame.style.marginLeft = "400px";
   document.querySelector(".end-board").style.display = "none";
+  document.querySelector("#soundeffect").src = "./music/endgame.wav";
+  document.querySelector("#soundeffect").play();
 }
 
 function checkAnswerEndgame() {

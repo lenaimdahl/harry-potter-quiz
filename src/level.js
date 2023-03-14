@@ -84,6 +84,8 @@ function createLevel() {
   if (level > oldLevel) {
     document.querySelector("#level-text").innerHTML =
       "You reached a new Level!";
+    document.querySelector("#soundeffect").src = "./music/next-level.wav";
+    document.querySelector("#soundeffect").play();
   }
 }
 
@@ -97,15 +99,13 @@ function startCountdown() {
 
     document.getElementById("timeremainingvalue").innerHTML = timeremaining;
 
-    if (timeremaining === 0) {
+    if (timeremaining === 0 || chance === 0) {
       stopCountdown();
       document.querySelector("#question-text").style.display = "none";
       document.querySelector("#game-over").style.display = "inherit";
-    }
-    if (chance === 0) {
-      stopCountdown();
-      document.querySelector("#question-text").style.display = "none";
-      document.querySelector("#game-over").style.display = "inherit";
+      document.querySelector("#soundeffect").src = "./music/losing.wav";
+      document.querySelector("#soundeffect").play();
+      document.querySelector("#mySong").stop();
     }
   }, 1000);
 }
