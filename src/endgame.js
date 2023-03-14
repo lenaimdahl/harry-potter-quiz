@@ -27,7 +27,7 @@ document.getElementById("startreset-endgame").onclick = startEndgame;
 
 function finishEndgame() {
   let textEndgame = document.querySelector(".heading-endgame");
-  textEndgame.innerHTML = "We killed the monster!";
+  textEndgame.innerHTML = "`We killed the monster! Congrats!";
   textEndgame.style.fontSize = "50pt";
   textEndgame.style.marginTop = "500pxpx";
   textEndgame.style.marginLeft = "400px";
