@@ -82,8 +82,9 @@ function createLevel() {
 
   document.querySelector("#levelvalue").innerHTML = level;
   if (level > oldLevel) {
-    document.querySelector("#level-text").innerHTML =
-      "You reached a new Level!";
+    let levelText = document.querySelector("#level-text");
+    levelText.innerHTML = "You reached a new Level!";
+    levelText.style.color = "white";
     document.querySelector("#soundeffect").src = "./music/next-level.wav";
     document.querySelector("#soundeffect").play();
   }

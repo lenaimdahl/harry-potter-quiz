@@ -29,7 +29,7 @@ function finishEndgame() {
   let textEndgame = document.querySelector(".heading-endgame");
   textEndgame.innerHTML = "`We killed the monster! Congrats!";
   textEndgame.style.fontSize = "50pt";
-  textEndgame.style.marginTop = "500pxpx";
+  textEndgame.style.marginTop = "500px";
   textEndgame.style.marginLeft = "400px";
   document.querySelector(".end-board").style.display = "none";
   document.querySelector("#soundeffect").src = "./music/endgame.wav";
