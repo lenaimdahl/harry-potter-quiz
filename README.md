@@ -16,19 +16,26 @@ To play the game, you will need to clone this repository and open the `index.htm
 1. Start the game by clicking the "Start game" button.
 1. You will be presented with a math question. Solve it by clicking on the correct answer.
 1. If your answer is correct, you will move on to the Harry Potter trivia section.
-1. In the Harry Potter trivia section, you will be asked a series of questions about the Harry Potter world. Answer each question and click on the "Submit" button.
+1. In the Harry Potter trivia section, you will be asked a series of questions about the Harry Potter world.
 1. If your answer is correct, you will earn a point. If your answer is incorrect, you will not earn a point.
 1. The game will end when you have answered all of the Harry Potter trivia questions.
+1. After you finished all the questions, you have entered the Chamber of Secrets.
+1. The start the endgame click on "Fight against the monster".
+1. click on the "Start Endgame" button to and answer 5 trivia question.
 
 ## Levels
 
 ### Part 1: Math Questions
 
-In the first level, the player needs to answer five math questions correctly within a given time limit to proceed to the next level. The player has 30 seconds to answer each question. If the player fails to answer a question correctly within the time limit, the game will end.
+In the first part of a level, the player needs to answer five math questions correctly within a given time limit to proceed to the next level. The player has 30 seconds to answer each question. If the player fails to answer a question correctly within the time limit, the game will end.
 
 ### Part 2: Harry Potter Trivia Questions
 
-In the second level, the player needs to answer five Harry Potter trivia questions correctly within a given time limit to win the game. The player has 30 seconds to answer each question. If the player fails to answer a question correctly within the time limit, the game will end.
+In the second part of a level, the player needs to answer five Harry Potter trivia questions correctly within a given time limit to win the game. The player has 30 seconds to answer each question. If the player fails to answer a question correctly within the time limit, the game will end.
+
+## Endgame
+
+to finish the game you must answer 5 more trivia Harry Potter questions.
 
 ## Technology Used
 
